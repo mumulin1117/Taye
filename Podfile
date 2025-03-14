@@ -22,7 +22,7 @@ target 'Toye' do
   pod 'RTRootNavigationController'
   pod 'TZImagePickerController'
   pod 'EmptyDataSet-Swift'
-
+  pod 'FBSDKCoreKit'
 end
 
 post_install do |installer|

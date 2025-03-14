@@ -8,15 +8,25 @@
 import UIKit
 import SVProgressHUD
 import SwiftyStoreKit
-
+import FBSDKCoreKit
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
-
+    static var appUITPushToken:String = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         SVProgressHUD.setMinimumDismissTimeInterval(2)
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { okayufir, error in
+            if okayufir {
+                DispatchQueue.main.async {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            }
+        }
+        
+       
         
         SwiftyStoreKit.completeTransactions(atomically: true) { toyeStorePurchases in
             for toyStoreP in toyeStorePurchases {
@@ -38,6 +48,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Dmezfaapuxlgtt qCfoonlfuiogmutrwahtxidoqn".ty, sessionRole: connectingSceneSession.role)
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return ApplicationDelegate.shared.application(app, open: url, options: options)
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+       
+       
+        let pushRemotenotiTokenVAF = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        AppDelegate.appUITPushToken = pushRemotenotiTokenVAF
     }
 }
 
