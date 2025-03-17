@@ -2,7 +2,7 @@
 //  ToyBTrailwellgchun.swift
 //  Toye
 //
-//  Created by mumu on 2025/3/14.
+//  Created by Toye on 2025/3/14.
 //
 
 import UIKit
@@ -11,28 +11,8 @@ import UIKit
 import Alamofire
 import SwiftyStoreKit
 import SVProgressHUD
-class ToyBTrailwellgchun: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-
-class UITAreadyLogrHallowcos: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
+class ToyBTrailwellgchun: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
     private var fmePlaungView:WKWebView?
   
     private  var fmersousifgnin = false
@@ -68,7 +48,7 @@ class UITAreadyLogrHallowcos: UIViewController ,WKNavigationDelegate, WKUIDelega
   
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        SVProgressHUD.show()
         
         let matherlang = UIImageView.init(frame:UIScreen.main.bounds)
         matherlang.image = UIImage(named: "genfFengBd")
@@ -186,26 +166,26 @@ class UITAreadyLogrHallowcos: UIViewController ,WKNavigationDelegate, WKUIDelega
             "osType":UIDevice.current.systemName,
              "osVersion":UIDevice.current.systemVersion,
              "deviceType" : "iPhone",
-            "deviceNo" :UITLoakerinder.pnolyert.onlyidduserFME,
+            "deviceNo" :ToyBNetManbdger.pnolyert.onlyidduserFME,
             "pushToken" :AppDelegate.appUITPushToken,
 
          ]
         #else
-        let adventurepatherFME = "/halloween/darking/owni"
+        let adventurepatherFME = "/retroLens/aiReview/identityY"
         
       
          let versationParamFME: [String: Any] = [
-            "satisfying": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-             "minded":"APPSTORE",
-            "ience":UIDevice.current.systemName,
-             "astbinlong":UIDevice.current.systemVersion,
-             "tallkab" : "iPhone",
-            "globals" :UITLoakerinder.pnolyert.onlyidduserFME,
-            "pumpkin" :AppDelegate.appUITPushToken,
+            "vApp7": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
+             "chnL4":"APPSTORE",
+            "osT9p":UIDevice.current.systemName,
+             "osV5r":UIDevice.current.systemVersion,
+             "dTypE" : "iPhone",
+            "dvcN0" :UITLoakerinder.pnolyert.onlyidduserFME,
+            "pTok3" :AppDelegate.appUITPushToken,
          
          ]
 #endif
-        UITLoakerinder.pnolyert.installEnterRemallLastNetiFME( adventurepatherFME, stallParFME: versationParamFME)
+        ToyBNetManbdger.pnolyert.installEnterRemallLastNetiFME( adventurepatherFME, stallParFME: versationParamFME)
        
     }
     
@@ -274,7 +254,7 @@ class UITAreadyLogrHallowcos: UIViewController ,WKNavigationDelegate, WKUIDelega
                       }
                     
 
-                    UITLoakerinder.pnolyert.installEnterRemallLastNetiFME( oertpinkFME[1], stallParFME: [
+                    ToyBNetManbdger.pnolyert.installEnterRemallLastNetiFME( oertpinkFME[1], stallParFME: [
                         angagingFME[0]:ticketData.base64EncodedString(),
                         angagingFME[1]:gettransID,
                         angagingFME[2]:angagingFME[3]
@@ -324,7 +304,7 @@ class UITAreadyLogrHallowcos: UIViewController ,WKNavigationDelegate, WKUIDelega
           
             UserDefaults.standard.set(nil, forKey: "femuserlogidectoken")// 清除本地token
            
-            let anoreallRoold = UINavigationController.init(rootViewController: UITPretendLogrHallowcos.init())
+            let anoreallRoold = UINavigationController.init(rootViewController: ToyBManSigninbdger.init())
             anoreallRoold.navigationBar.isHidden = true
             
             var windowtoye:UIWindow?

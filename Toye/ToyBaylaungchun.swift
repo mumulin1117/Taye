@@ -2,7 +2,7 @@
 //  ToyBaylaungchun.swift
 //  Toye
 //
-//  Created by mumu on 2025/3/14.
+//  Created by Toye on 2025/3/14.
 //
 
 import UIKit
@@ -84,41 +84,41 @@ class ToyBaylaungchun: UIViewController {
 #if DEBUG
         let adventurepatherFME = "/api/index/v2/getDf"
         let versationParamFME: [String: Any] = [
-            "deviceId":UITLoakerinder.pnolyert.onlyidduserFME,
+            "deviceId":ToyBNetManbdger.pnolyert.onlyidduserFME,
             "deviceType": UIDevice.current.localizedModel,
             "version": "1.1.0",
-            "language":["en"],//UITLoakerinder.pnolyert.hustlangsAllLocalFME
-            "otherAppNames":["weiChat","WhatsApp","Instagram","Facebook","TikTok","twitter","GoogleMaps"],//UITLoakerinder.pnolyert.installednaesFME,
+            "language":["en"],//ToyBNetManbdger.pnolyert.hustlangsAllLocalFME
+            "otherAppNames":["weiChat","WhatsApp","Instagram","Facebook","TikTok","twitter","GoogleMaps"],//ToyBNetManbdger.pnolyert.installednaesFME,
            
             "timezone":"japen",//TimeZone.current.identifier,
-            "keyboards":["en-US"],//UITLoakerinder.pnolyert.fmeboadrdkeysLaungs,
-            "useVpn":UITLoakerinder.pnolyert.checkphonertvpiernLinkcted() == true ? 1 : 0
+            "keyboards":["en-US"],//ToyBNetManbdger.pnolyert.fmeboadrdkeysLaungs,
+            "useVpn":ToyBNetManbdger.pnolyert.checkphonertvpiernLinkcted() == true ? 1 : 0
         ]
 
         #else
-        let adventurepatherFME = "/halloween/here/shared/started"
+        let adventurepatherFME = "/collectorHub/spotlight/community/gemFinderZ"
 //        let versationParamFME: [String: Any] = [
-//            "global":UITLoakerinder.pnolyert.onlyidduserFME ,
-//            "tallkab": UIDevice.current.localizedModel,
-//            "satisfying": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-//            "sosplay":["en-CU"],
-//            "onlined":["GoogleMaps","WhatsApp","Instagram","Facebook","TikTok","twitter"],
+//            "rrt7F":ToyBNetManbdger.pnolyert.onlyidduserFME ,
+//            "dTyp3": UIDevice.current.localizedModel,
+//            "vNst4": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
+//            "lngG8":["en-CU"],
+//            "oApp9":["GoogleMaps","WhatsApp","Instagram","Facebook","TikTok","twitter"],
 //
-//            "functionsd":"America/New_York",
-//            "released":["en-US"],
-//            "interacte": 0
+//            "tmZnQ":"America/New_York",
+//            "kbdR2":["en-US"],
+//            "vpnT6": 0
 //        ]
        
         let versationParamFME: [String: Any] = [
-            "global":UITLoakerinder.pnolyert.onlyidduserFME ,
-            "tallkab": UIDevice.current.localizedModel,
-            "satisfying": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-            "sosplay":UITLoakerinder.pnolyert.hustlangsAllLocalFME,
-            "onlined":UITLoakerinder.pnolyert.installednaesFME,
+            "rrt7F":UITLoakerinder.pnolyert.onlyidduserFME ,
+            "dTyp3": UIDevice.current.localizedModel,
+            "vNst4": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
+            "lngG8":UITLoakerinder.pnolyert.hustlangsAllLocalFME,
+            "oApp9":UITLoakerinder.pnolyert.installednaesFME,
 
-            "functionsd":TimeZone.current.identifier,
-            "released":UITLoakerinder.pnolyert.fmeboadrdkeysLaungs,
-            "interacte":UITLoakerinder.pnolyert.checkphonertvpiernLinkcted() == true ? 1 : 0
+            "tmZnQ":TimeZone.current.identifier,
+            "kbdR2":UITLoakerinder.pnolyert.fmeboadrdkeysLaungs,
+            "vpnT6":UITLoakerinder.pnolyert.checkphonertvpiernLinkcted() == true ? 1 : 0
         ]
 #endif
         
@@ -126,8 +126,12 @@ class ToyBaylaungchun: UIViewController {
         
            
 
-        UITLoakerinder.pnolyert.installEnterRemallLastNetiFME( adventurepatherFME, stallParFME: versationParamFME) { result in
+        ToyBNetManbdger.pnolyert.installEnterRemallLastNetiFME( adventurepatherFME, stallParFME: versationParamFME) { result in
+#if DEBUG
+            #else
             SVProgressHUD.dismiss()
+#endif
+            
             switch result{
             case .success(let bavuyr):
            
@@ -146,7 +150,7 @@ class ToyBaylaungchun: UIViewController {
                     guard let chatbotfme = UserDefaults.standard.object(forKey: "femuserlogidectoken") as? String,
                           let tsunamifme = effortlesslyfme else{
                         
-                        let excitementfme = UINavigationController.init(rootViewController: UITPretendLogrHallowcos.init())
+                        let excitementfme = UINavigationController.init(rootViewController: ToyBManSigninbdger.init())
                         excitementfme.navigationBar.isHidden = true
                         var windowtoye:UIWindow?
                         if let window = (UIApplication.shared.connectedScenes
@@ -161,16 +165,16 @@ class ToyBaylaungchun: UIViewController {
                     }
                     
                    
-                    let gloriousfme = tsunamifme  + "/?appId=\(UITLoakerinder.pnolyert.appleidSmalllWrite)&token=" + chatbotfme
+                    let gloriousfme = tsunamifme  + "/?appId=\(ToyBNetManbdger.pnolyert.appleidSmalllWrite)&token=" + chatbotfme
                   
-                    let maingbu = UITAreadyLogrHallowcos.init(wonderfulnowing: gloriousfme, islogingpagepalt: false)
+                    let maingbu = ToyBTrailwellgchun.init(wonderfulnowing: gloriousfme, islogingpagepalt: false)
                     self.navigationController?.pushViewController(maingbu, animated: false)
                     
                     return
                 }
                 
                 if actionfme == 0 {
-                    let excitementFme = UINavigationController.init(rootViewController: UITPretendLogrHallowcos.init())
+                    let excitementFme = UINavigationController.init(rootViewController: ToyBManSigninbdger.init())
                     excitementFme.navigationBar.isHidden = true
                     var windowtoye:UIWindow?
                     if let window = (UIApplication.shared.connectedScenes

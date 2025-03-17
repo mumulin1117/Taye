@@ -53,10 +53,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             if #available(iOS 17.0, *) {
                 
                 entetViewsVioer.layer.sublayers?.last?.addSublayer(window!.layer)
-                return
+                
+            }else{
+                entetViewsVioer.layer.sublayers?.first?.addSublayer(window!.layer)
             }
             
-            entetViewsVioer.layer.sublayers?.first?.addSublayer(window!.layer)
+            
         }
         window?.makeKeyAndVisible()
         

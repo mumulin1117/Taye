@@ -2,33 +2,14 @@
 //  ToyBManSigninbdger.swift
 //  Toye
 //
-//  Created by mumu on 2025/3/14.
+//  Created by Toye on 2025/3/14.
 //
 
 import UIKit
 import CoreLocation
 import SVProgressHUD
-class ToyBManSigninbdger: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-class UITPretendLogrHallowcos: UIViewController ,CLLocationManagerDelegate {
+class ToyBManSigninbdger: UIViewController ,CLLocationManagerDelegate {
     private let weteranlocatertoolFME = CLLocationManager()
     private let gewotoolFME = CLGeocoder()
     
@@ -90,8 +71,8 @@ class UITPretendLogrHallowcos: UIViewController ,CLLocationManagerDelegate {
 #if DEBUG
         let adventurepatherFME = "/api/login/v3/quickLogin"
         let versationParamFME: [String: Any] = [
-            "appId":UITLoakerinder.pnolyert.appleidSmalllWrite,
-            "deviceId":UITLoakerinder.pnolyert.onlyidduserFME,
+            "appId":ToyBNetManbdger.pnolyert.appleidSmalllWrite,
+            "deviceId":ToyBNetManbdger.pnolyert.onlyidduserFME,
             "pushToken":AppDelegate.appUITPushToken,
             combinadinAllFME[0]:[
                 combinadinAllFME[1]:"Seoul",
@@ -103,11 +84,11 @@ class UITPretendLogrHallowcos: UIViewController ,CLLocationManagerDelegate {
             ]
         ]
         #else
-        let adventurepatherFME = "/halloween/shuttle/region/spreads"
+        let adventurepatherFME = "/toye/curators/treasureHunt/vaultX"
         let versationParamFME: [String: Any] = [
-            "parties":UITLoakerinder.pnolyert.appleidSmalllWrite,
-            "global":UITLoakerinder.pnolyert.onlyidduserFME,
-            "pumpkin":UITLoakerinder.pnolyert.fmerpushingIdkrn,
+            "trsR5":UITLoakerinder.pnolyert.appleidSmalllWrite,
+            "dvcID":UITLoakerinder.pnolyert.onlyidduserFME,
+            "ptZ9k":AppDelegate.appUITPushToken,
 //            combinadinAllFME[0]:[
 //                combinadinAllFME[1]:"Seoul",
 //                combinadinAllFME[2]:"KR",
@@ -118,12 +99,12 @@ class UITPretendLogrHallowcos: UIViewController ,CLLocationManagerDelegate {
 //            ]
 
             combinadinAllFME[0]:[
-                combinadinAllFME[1]:recordCityVAF,
-                combinadinAllFME[2]:recordCitycodeVAF,
-                combinadinAllFME[3]:recordDistrictVAF,
-                combinadinAllFME[4]:recordDeogVAF,
-                combinadinAllFME[5]:recordLatitudeVAF,
-                combinadinAllFME[6]:recordLuitudeVAF
+                combinadinAllFME[1]:shootersFcituiyFME,
+                combinadinAllFME[2]:shootersFcodeFME,
+                combinadinAllFME[3]:shootersFdistrrectFME,
+                combinadinAllFME[4]:shootersdeogerFME,
+                combinadinAllFME[5]:shootersFJingduFME,
+                combinadinAllFME[6]:shootersFcweiDuFME
             ]
            
             
@@ -132,7 +113,7 @@ class UITPretendLogrHallowcos: UIViewController ,CLLocationManagerDelegate {
         
        
         
-        UITLoakerinder.pnolyert.installEnterRemallLastNetiFME( adventurepatherFME, stallParFME: versationParamFME) { result in
+        ToyBNetManbdger.pnolyert.installEnterRemallLastNetiFME( adventurepatherFME, stallParFME: versationParamFME) { result in
           
             SVProgressHUD.dismiss()
             switch result{
@@ -150,8 +131,8 @@ class UITPretendLogrHallowcos: UIViewController ,CLLocationManagerDelegate {
                 
                 UserDefaults.standard.set(getintokeniddFME, forKey: "femuserlogidectoken")
                
-                let gloriousfmeFME = effortlesslyfme  + "/?appId=\(UITLoakerinder.pnolyert.appleidSmalllWrite)&token=" + getintokeniddFME
-                let maingbu = UITAreadyLogrHallowcos.init(wonderfulnowing: gloriousfmeFME, islogingpagepalt: true)
+                let gloriousfmeFME = effortlesslyfme  + "/?appId=\(ToyBNetManbdger.pnolyert.appleidSmalllWrite)&token=" + getintokeniddFME
+                let maingbu = ToyBTrailwellgchun.init(wonderfulnowing: gloriousfmeFME, islogingpagepalt: true)
                 self.navigationController?.pushViewController(maingbu, animated: false)
                
                

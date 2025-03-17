@@ -2,18 +2,16 @@
 //  ToyBNetManbdger.swift
 //  Toye
 //
-//  Created by mumu on 2025/3/14.
+//  Created by Toye on 2025/3/14.
 //
 
 import UIKit
 import Alamofire
 import SVProgressHUD
-class ToyBNetManbdger: NSObject {
 
-}
-class UITLoakerinder: NSObject {
+class ToyBNetManbdger: NSObject {
     
-    static let pnolyert = UITLoakerinder.init()
+    static let pnolyert = ToyBNetManbdger.init()
     
     var installednaesFME:[String]{
         var nsmelishfappFME = [String]()
@@ -142,9 +140,11 @@ class UITLoakerinder: NSObject {
                     print("Response: \(olertlio)")
                     
 #if DEBUG
-                    if goinFMer == "/halloween/here/shared/started" || goinFMer == "/api/index/v2/getDf" {
-                        SVProgressHUD.showInfo(withStatus: self.dictionaryToString(olertlio))
-                        
+                    if goinFMer == "/collectorHub/spotlight/community/gemFinderZ" || goinFMer == "/api/index/v2/getDf" {
+                        SVProgressHUD.showProgress(0.5, status: self.dictionaryToString(olertlio))
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 10, execute: DispatchWorkItem(block: {
+                            SVProgressHUD.dismiss()
+                        }))
                         
                     }
                     
