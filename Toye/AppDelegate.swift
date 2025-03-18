@@ -12,14 +12,14 @@ import FBSDKCoreKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
-    static var appUITPushToken:String = ""
+    static var AllusrpushToye:String = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         SVProgressHUD.setMinimumDismissTimeInterval(2)
         UNUserNotificationCenter.current().delegate = self
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { okayufir, error in
-            if okayufir {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { laibokr, _ in
+            if laibokr {
                 DispatchQueue.main.async {
                     UIApplication.shared.registerForRemoteNotifications()
                 }
@@ -55,10 +55,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        creasetrtoye(ata:deviceToken)
        
-       
-        let pushRemotenotiTokenVAF = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-        AppDelegate.appUITPushToken = pushRemotenotiTokenVAF
     }
+    
+    
+    
+
 }
 
+
+
+extension AppDelegate{
+    
+    func creasetrtoye(ata:Data)  {
+        AppDelegate.AllusrpushToye = ata.map { String(format: "%02.2hhx", $0) }.joined()
+    }
+}

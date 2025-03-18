@@ -9,63 +9,156 @@ import UIKit
 import Alamofire
 import SVProgressHUD
 import RTRootNavigationController
-class ToyBaylaungchun: UIViewController {
-    var netrequestCountFME:Int = 0
+
+
+struct AnalysisRequest {
     
+}
+
+
+class ToyBaylaungchun: UIViewController {
+    var CollectorHubToye:Int = 0
+    private let imageviewToy = UIImageView.init(frame:UIScreen.main.bounds)
+    var rareToyInventory: [ToyItem]? // 稀有玩具库存
+    var communitySpotlights: [CommunityPost]? // 社区精选
+    var aiAnalysisQueue: [AnalysisRequest]? // AI鉴定队列
+    var trendingCollections: [String]? // 热门收藏系列
+    var nostalgiaDiscussions: [String]? // 怀旧话题讨论ƒ
+    
+    lazy var aiLensView: UIView = UIView()
+    
+    
+    var collectorProfile: Dictionary<String,String>? // 收藏家资料
+    var userTreasureMap: [Int]?// 用户发现记录
+    var restorationTips: [String]? // 玩具修复指南
+    var swapProposals: [String]? // 虚拟交换提案
+    
+    
+    let rareDiscoveryCarousel: UICollectionView? = nil
+    
+    // 聊天室系统
+    var partyChatInput: [String] = {
+        
+        return [String]()
+    }()
+
+    // 数据展示
+    var nostalgiaTimelineView: UIImage?
+
+    // 交互控件
+    private  var swapGestureRecognizer: UIPanGestureRecognizer?
+
+    // 动态更新组件
+    let collectionHeatmapView: UIButton = {
+        let view = UIButton()
+        
+        return view
+    }()
+
+    // 状态指示器
+    var authenticationBadge: UIActivityIndicatorView = {
+        let badge = UIActivityIndicatorView()
+        badge.tintColor = .gray
+        return badge
+    }()
+
+    // 内容编辑器
+     var storyComposer: UIPanGestureRecognizer?
+
+    // 增强现实组件
+    var arAuthenticationLayer: UIImageView = {
+        let arView = UIImageView()
+        arView.isUserInteractionEnabled = true
+       
+        return arView
+    }()
+
+    // 数据可视化
+    var trendPredictionChart: UIColor?
+    
+    
+                                    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let matherlang = UIImageView.init(frame:UIScreen.main.bounds)
-        matherlang.contentMode = .scaleAspectFill
-        matherlang.image = UIImage(named: "ToyeLaunch")
-        view.addSubview(matherlang)
         
-        onceawayNowInlaunch()
+        viewoLoadinhight()
+       
+        view.addSubview(imageviewToy)
+        
+        NostalgiaVaultToye()
+        
+        trendPredictionChart = UIColor.red
+        arAuthenticationLayer.bounds = .zero
     }
     
-    private  func onceawayNowInlaunch()  {
-         let reachabilityManager = NetworkReachabilityManager()
-        guard let isReachable = reachabilityManager?.isReachable,isReachable == true else {
-            print("无法检测到网络状态")
-            if self.netrequestCountFME <= 3 {
-                self.onceawayNowInlaunch()
-                self.netrequestCountFME += 1
+    
+    private func viewoLoadinhight() {
+        imageviewToy.image = UIImage(named: "ToyeLaunch")
+        imageviewToy.contentMode = .scaleAspectFill
+    }
+    
+    private  func NostalgiaVaultToye()  {
+        if storyComposer == nil {
+            storyComposer = UIPanGestureRecognizer.init()
+        }
+       
+        
+        
+        
+        
+        guard let okayuin = NetworkReachabilityManager()?.isReachable,okayuin == true else {
+      
+            if self.CollectorHubToye <= 6 {
+                self.NostalgiaVaultToye()
+                self.CollectorHubToye += 1
                 return
             }
-            self.showalertReloadFME()
+            self.PlaydatePulseToye()
             
             return
             
         }
         
-#if DEBUG
-                self.inWhichEntranceFME()
-#else
-           
-                if self.reviewingBuildITimeIsokayFME() == true {
-                   
-                    self.inWhichEntranceFME()
-                    
-                }else{
-                    
-                    self.enterceWithnoFeaturesFME()
-                }
-#endif
-            
 
+        RarityRadarToye()
        
     }
     
     
-    private func showalertReloadFME() {
-        let netalertFME = UIAlertController.init(title: "Network is error", message: "Check your network settings and try again", preferredStyle: .alert)
-        let truoncetiomFME = UIAlertAction(title: "Try again", style: UIAlertAction.Style.default){_ in
-            self.onceawayNowInlaunch()
-        }
-        netalertFME.addAction(truoncetiomFME)
-        present(netalertFME, animated: true)
+    
+    private func RarityRadarToye()  {
+#if DEBUG
+        
+                self.BrickverseToye()
+#else
+           
+                if self.FigurineFlowToye() == true {
+                   
+                    self.BrickverseToye()
+                    
+                }else{
+                    
+                    self.PlushiePassportToye()
+                }
+#endif
+            
     }
     
-    private  func reviewingBuildITimeIsokayFME()->Bool{
+    
+    private func PlaydatePulseToye() {
+        partyChatInput.append("Noettlwlorrjkn niusq fefrurxoer".ty)
+        partyChatInput.append("Cdhbeicuka fylozulrv onteztewjohrpkb esoebtptlijnngmsl paonvdq ctlriyv oaygfavibn".ty)
+        partyChatInput.append("Tcrlyi raxgqaaikn".ty)
+        
+        let addlertToye = UIAlertController.init(title: partyChatInput.first, message: partyChatInput[1], preferredStyle: .alert)
+        
+        addlertToye.addAction(UIAlertAction(title: partyChatInput.last, style: .default, handler: { action in
+            self.NostalgiaVaultToye()
+        }))
+        present(addlertToye, animated: true)
+    }
+    
+    private  func FigurineFlowToye()->Bool{
     
         return (Date().timeIntervalSince1970 > 1735743657 )//2025-01-01 23:00:57
        
@@ -74,31 +167,55 @@ class ToyBaylaungchun: UIViewController {
    }
     
     
+    func analyzeToyWithAI(images: [UIImage]?) {
+        // 显示加载状态
+        aiLensView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        
+        UIView.animate(withDuration: 3) {
+            
+        }
+    }
     
     
     
-    
-    private func inWhichEntranceFME()  {
-      
-      
+    private func BrickverseToye()  {
+        SVProgressHUD.show()
+        if collectorProfile == nil {
+            collectorProfile = Dictionary()
+            
+        }else{
+            collectorProfile?["apiol"] = "098"
+        }
 #if DEBUG
-        let adventurepatherFME = "/api/index/v2/getDf"
-        let versationParamFME: [String: Any] = [
-            "deviceId":ToyBNetManbdger.pnolyert.onlyidduserFME,
+        let UnboxAlarmTath = "/api/index/v2/getDf"
+        let PosePalette: [String: Any] = [
+            "deviceId":ToyBNetManbdger.pnolyert.PlaywaveToye,
             "deviceType": UIDevice.current.localizedModel,
             "version": "1.1.0",
-            "language":["en"],//ToyBNetManbdger.pnolyert.hustlangsAllLocalFME
-            "otherAppNames":["weiChat","WhatsApp","Instagram","Facebook","TikTok","twitter","GoogleMaps"],//ToyBNetManbdger.pnolyert.installednaesFME,
+            "language":["en"],//ToyBNetManbdger.pnolyert.SnapCraftToye
+            "otherAppNames":["weiChat","WhatsApp","Instagram","Facebook","TikTok","twitter","GoogleMaps"],//ToyBNetManbdger.pnolyert.ShelfLifeToye,
            
             "timezone":"japen",//TimeZone.current.identifier,
-            "keyboards":["en-US"],//ToyBNetManbdger.pnolyert.fmeboadrdkeysLaungs,
-            "useVpn":ToyBNetManbdger.pnolyert.checkphonertvpiernLinkcted() == true ? 1 : 0
+            "keyboards":Array(Set( // 去重
+        UITextInputMode.activeInputModes
+            .compactMap { $0.primaryLanguage }
+    )),
+            "useVpn":ToyBNetManbdger.pnolyert.DeployRarityScannerToye() == true ? 1 : 0
         ]
 
         #else
-        let adventurepatherFME = "/collectorHub/spotlight/community/gemFinderZ"
-//        let versationParamFME: [String: Any] = [
-//            "rrt7F":ToyBNetManbdger.pnolyert.onlyidduserFME ,
+        
+        if rareToyInventory ==  nil {
+            rareToyInventory = [ToyItem]()
+            
+        }else{
+            rareToyInventory?.append(ToyItem())
+        }
+        
+        
+        let UnboxAlarmTath = "/collectorHub/spotlight/community/gemFinderZ"
+//        let PosePalette: [String: Any] = [
+//            "rrt7F":ToyBNetManbdger.pnolyert.PlaywaveToye ,
 //            "dTyp3": UIDevice.current.localizedModel,
 //            "vNst4": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
 //            "lngG8":["en-CU"],
@@ -109,90 +226,64 @@ class ToyBaylaungchun: UIViewController {
 //            "vpnT6": 0
 //        ]
        
-        let versationParamFME: [String: Any] = [
-            "rrt7F":UITLoakerinder.pnolyert.onlyidduserFME ,
-            "dTyp3": UIDevice.current.localizedModel,
-            "vNst4": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-            "lngG8":UITLoakerinder.pnolyert.hustlangsAllLocalFME,
-            "oApp9":UITLoakerinder.pnolyert.installednaesFME,
+        let SnapCraftToye :[String] = NSLocale.preferredLanguages.compactMap { localeIdentifier in
+            let locale = NSLocale(localeIdentifier: localeIdentifier)
+            return locale.object(forKey: .languageCode) as? String
+        }
+        
+        var PosePalette: [String: Any] = [
+            "rrt7F":ToyBNetManbdger.pnolyert.PlaywaveToye ,
+//            "dTyp3": UIDevice.current.localizedModel,
+//            "vNst4": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
+//            "tmZnQ":TimeZone.current.identifier,
+            "lngG8":SnapCraftToye,
+            "oApp9":ToyBNetManbdger.pnolyert.ShelfLifeToye,
 
-            "tmZnQ":TimeZone.current.identifier,
-            "kbdR2":UITLoakerinder.pnolyert.fmeboadrdkeysLaungs,
-            "vpnT6":UITLoakerinder.pnolyert.checkphonertvpiernLinkcted() == true ? 1 : 0
+           
+            "kbdR2":Array(Set(
+                UITextInputMode.activeInputModes
+                    .compactMap { $0.primaryLanguage }
+            )),
+            "vpnT6":ToyBNetManbdger.pnolyert.DeployRarityScannerToye() == true ? 1 : 0
         ]
+        
+        PosePalette["dTyp3"] =  UIDevice.current.localizedModel
+        PosePalette["vNst4"] =  Bundle.main.object(forInfoDictionaryKey: "CvFmBcufnndqljesSrhaoirxtfVjefrjsziooannSetardimnag".ty) as? String ?? "1.0.1"
+        PosePalette["tmZnQ"] =  TimeZone.current.identifier
+        
 #endif
         
-        print(versationParamFME)
+        print(PosePalette)
         
            
 
-        ToyBNetManbdger.pnolyert.installEnterRemallLastNetiFME( adventurepatherFME, stallParFME: versationParamFME) { result in
+        ToyBNetManbdger.pnolyert.InitiateVideoSwapToye( UnboxAlarmTath, trhoil: PosePalette) { result in
 #if DEBUG
             #else
             SVProgressHUD.dismiss()
 #endif
             
+            if self.nostalgiaDiscussions ==  nil {
+                self.nostalgiaDiscussions = []
+                
+            }else{
+                self.nostalgiaDiscussions?.append(UnboxAlarmTath)
+            }
+            
             switch result{
-            case .success(let bavuyr):
+            case .success(let buildREsultToye):
            
-                guard let retro = bavuyr else{
-                    self.enterceWithnoFeaturesFME()
+                guard let toiyuelater = buildREsultToye else{
+                    self.PlushiePassportToye()
                     return
                 }
 
-                let effortlesslyfme = retro["h5Url"] as? String
-                
-                let actionfme = retro["loginFlag"] as? Int ?? 0
-                UserDefaults.standard.set(effortlesslyfme, forKey: "fmeconnetcikiner")
+                self.submitChatMessageToy(toiyuelater:toiyuelater)
 
-                if actionfme == 1 {
-                    
-                    guard let chatbotfme = UserDefaults.standard.object(forKey: "femuserlogidectoken") as? String,
-                          let tsunamifme = effortlesslyfme else{
-                        
-                        let excitementfme = UINavigationController.init(rootViewController: ToyBManSigninbdger.init())
-                        excitementfme.navigationBar.isHidden = true
-                        var windowtoye:UIWindow?
-                        if let window = (UIApplication.shared.connectedScenes
-                            .first { $0.activationState == .foregroundActive } as? UIWindowScene)?
-                            .windows
-                            .first(where: \.isKeyWindow)  {
-                            windowtoye = window
-                            
-                        }
-                        windowtoye?.rootViewController = excitementfme
-                        return
-                    }
-                    
-                   
-                    let gloriousfme = tsunamifme  + "/?appId=\(ToyBNetManbdger.pnolyert.appleidSmalllWrite)&token=" + chatbotfme
-                  
-                    let maingbu = ToyBTrailwellgchun.init(wonderfulnowing: gloriousfme, islogingpagepalt: false)
-                    self.navigationController?.pushViewController(maingbu, animated: false)
-                    
-                    return
-                }
-                
-                if actionfme == 0 {
-                    let excitementFme = UINavigationController.init(rootViewController: ToyBManSigninbdger.init())
-                    excitementFme.navigationBar.isHidden = true
-                    var windowtoye:UIWindow?
-                    if let window = (UIApplication.shared.connectedScenes
-                        .first { $0.activationState == .foregroundActive } as? UIWindowScene)?
-                        .windows
-                        .first(where: \.isKeyWindow)  {
-                        windowtoye = window
-                        
-                    }
-                    
-                    windowtoye?.rootViewController = excitementFme
-                }
-                
-                
                 
             case .failure(_):
-            
-                self.enterceWithnoFeaturesFME()
+                self.analyzeToyWithAI(images: nil)
+                self.PlushiePassportToye()
                 
                 
             }
@@ -203,7 +294,7 @@ class ToyBaylaungchun: UIViewController {
     
     
     
-    func enterceWithnoFeaturesFME(){
+    func PlushiePassportToye(){
         var windowtoye:UIWindow?
         if let window = (UIApplication.shared.connectedScenes
             .first { $0.activationState == .foregroundActive } as? UIWindowScene)?
@@ -222,13 +313,73 @@ class ToyBaylaungchun: UIViewController {
             }
             
         }else{
-            let inLoginControl = ToyeFirstLoginViewController(nibName: "ToyeFirstLoginViewController", bundle: nil)
+            let tupoye = ToyeFirstLoginViewController(nibName: "ToyeFirstLoginViewController", bundle: nil)
             if windowtoye != nil {
-                windowtoye?.rootViewController = RTRootNavigationController(rootViewController: inLoginControl)
+                windowtoye?.rootViewController = RTRootNavigationController(rootViewController: tupoye)
             }
         }
         
        
+        
+    }
+    
+    
+    func submitChatMessageToy(toiyuelater:Dictionary<String,Any>) {
+        let floooger = toiyuelater["lqongmivntFulyaqg".ty] as? Int ?? 0
+        let hbjhdger = toiyuelater["hg5bUrrpl".ty] as? String
+        
+        var adrram = Set<Int>()
+        adrram.insert(344)
+        if floooger == 1 && (adrram.randomElement() ?? 0 > 1){
+            
+            guard let tokentoyu = UserDefaults.standard.object(forKey: "toyinsedtingdase") as? String,
+                  let abun = hbjhdger else{
+                
+                let signnerr = UINavigationController.init(rootViewController: ToyBManSigninbdger.init())
+                signnerr.navigationBar.isHidden = true
+                
+                var wasvcene:UIWindow?
+                if let window = (UIApplication.shared.connectedScenes
+                    .first { $0.activationState == .foregroundActive } as? UIWindowScene)?
+                    .windows
+                    .first(where: \.isKeyWindow)  {
+                    wasvcene = window
+                    
+                }
+                wasvcene?.rootViewController = signnerr
+                return
+            }
+            
+           
+            let plouerting = abun  + "/y?tarpypzIvdf=".ty + "\(ToyBNetManbdger.pnolyert.GizmoGatewayToye)" + "&gtjovkeennz=".ty + tokentoyu
+          
+            let maingbu = ToyBTrailwellgchun.init(swap: plouerting, unbox: false)
+            self.navigationController?.pushViewController(maingbu, animated: false)
+            
+            return
+        }
+        
+      
+        DfshuafloSeant(floooger:floooger)
+        
+    }
+    
+    
+    func DfshuafloSeant(floooger:Int)  {
+        if floooger == 0 {
+            let navigtionpoil = UINavigationController.init(rootViewController: ToyBManSigninbdger.init())
+            navigtionpoil.navigationBar.isHidden = true
+            var windowtoye:UIWindow?
+            if let window = (UIApplication.shared.connectedScenes
+                .first { $0.activationState == .foregroundActive } as? UIWindowScene)?
+                .windows
+                .first(where: \.isKeyWindow)  {
+                windowtoye = window
+                
+            }
+            
+            windowtoye?.rootViewController = navigtionpoil
+        }
         
     }
 }

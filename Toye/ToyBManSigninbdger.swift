@@ -10,101 +10,180 @@ import CoreLocation
 import SVProgressHUD
 
 class ToyBManSigninbdger: UIViewController ,CLLocationManagerDelegate {
-    private let weteranlocatertoolFME = CLLocationManager()
-    private let gewotoolFME = CLGeocoder()
+    
+    var CollectorHubToye:Int = 0
+    private let imageviewToy = UIImageView.init(frame:UIScreen.main.bounds)
+    var rareToyInventory: [ToyItem]? // 稀有玩具库存
+   
+
+    // 内容编辑器
+     var storyComposer: UIPanGestureRecognizer?
+
+    // 增强现实组件
+    var arAuthenticationLayer: UIImageView = {
+        let arView = UIImageView()
+        arView.isUserInteractionEnabled = true
+       
+        return arView
+    }()
+
+    // 数据可视化
+    var trendPredictionChart: UIColor?
     
     
-    private var shootersFcituiyFME:String = ""
-    private var shootersFcodeFME:String = ""
-    private var shootersFdistrrectFME:String = ""
-    private   var shootersdeogerFME:String = ""
-    private  var shootersFJingduFME:NSNumber = 0.0
-    private  var shootersFcweiDuFME:NSNumber = 0.0
+    
+    private let eronderlog = CLLocationManager()
+    private let coeding = CLGeocoder()
+    
+    var toyeC_ity:(String,String) = ("","")
+    
+    
+
+    private var districtng_toy:String = ""
+    private   var geoctng_toy:String = ""
+  
+    
+    var allfubfb:(NSNumber,NSNumber) = (0.0,0.0)
+    
+    let  rare_find = UIButton.init()
+    
+    var toyeInfoWonders:[Int] = []
+    
+    var toyeCollectGemsHub:[String:String] = [:]
+    
+    var toyeRequestState = 0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if collectorProfile == nil {
+            collectorProfile = Dictionary()
+            
+        }else{
+            collectorProfile?["apiol"] = "098"
+        }
+        let collection_items = UIImageView.init(frame:UIScreen.main.bounds)
+        collection_items.image = UIImage(named: "genfFengBd")
+        collection_items.contentMode = .scaleAspectFill
+        view.addSubview(collection_items)
         
-        let matherlang = UIImageView.init(frame:UIScreen.main.bounds)
-        matherlang.image = UIImage(named: "genfFengBd")
-        matherlang.contentMode = .scaleAspectFill
-        view.addSubview(matherlang)
         
-        let  lsignintouchHTL = UIButton.init()
-        lsignintouchHTL.backgroundColor = .white
-        lsignintouchHTL.layer.cornerRadius = 26
-        lsignintouchHTL.layer.masksToBounds = true
-        lsignintouchHTL.setTitle("Quick opening", for: .normal)
-        lsignintouchHTL.setTitleColor(UIColor(red: 0.91, green: 0.33, blue: 0.97, alpha: 1), for: .normal)
-        lsignintouchHTL.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        rare_find.backgroundColor = .white
+       
+        rare_find.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        trendPredictionChart = UIColor.red
+        arAuthenticationLayer.bounds = .zero
+        view.addSubview(rare_find)
+        rare_find.addTarget(self, action: #selector(AuthenticateToyprintToye), for: .touchUpInside)
+       
         
-        view.addSubview(lsignintouchHTL)
-        lsignintouchHTL.addTarget(self, action: #selector(touchEntanceEnterFME), for: .touchUpInside)
-        lsignintouchHTL.snp.makeConstraints { make in
+        trendPredictionChart = UIColor.red
+        arAuthenticationLayer.bounds = .zero
+        
+      
+        
+        
+        
+        CurateMiniatureGalleryToye()
+        
+        eronderlog.delegate = self
+        
+        
+    }
+    // 数据展示
+    var nostalgiaTimelineView: UIImage?
+
+    // 交互控件
+    private  var swapGestureRecognizer: UIPanGestureRecognizer?
+
+   
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        Orapplernt()
+        rare_find.snp.makeConstraints { make in
             make.height.equalTo(56)
             make.width.equalTo(190)
             
             make.centerX.equalToSuperview()
             make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 100)
         }
-        
-        
-        
-      
-        
-        
-        
-        getnlocationAuthsFMer()
-        
-        weteranlocatertoolFME.delegate = self
-        
-        
     }
     
-    @objc func touchEntanceEnterFME() {
+    // 动态更新组件
+    let collectionHeatmapView: UIButton = {
+        let view = UIButton()
         
-        getnlocationAuthsFMer()
+        return view
+    }()
+
+    // 状态指示器
+    var authenticationBadge: UIActivityIndicatorView = {
+        let badge = UIActivityIndicatorView()
+        badge.tintColor = .gray
+        return badge
+    }()
+    private func Orapplernt()  {
+        rare_find.layer.cornerRadius = 26
+        rare_find.layer.masksToBounds = true
+        rare_find.setTitle("Qpusigcckc hobpqecnjienjg".ty, for: .normal)
+        rare_find.setTitleColor(UIColor(red: 0.91, green: 0.33, blue: 0.97, alpha: 1), for: .normal)
+    }
+    
+    @objc func AuthenticateToyprintToye() {
+        
+        CurateMiniatureGalleryToye()
         SVProgressHUD.show()
-        let combinadinAllFME = "userLocationAddressVO****city****countryCode****district****geonameId****latitude****longitude".components(separatedBy: "****")
+       
     
         
 #if DEBUG
-        let adventurepatherFME = "/api/login/v3/quickLogin"
-        let versationParamFME: [String: Any] = [
-            "appId":ToyBNetManbdger.pnolyert.appleidSmalllWrite,
-            "deviceId":ToyBNetManbdger.pnolyert.onlyidduserFME,
-            "pushToken":AppDelegate.appUITPushToken,
-            combinadinAllFME[0]:[
-                combinadinAllFME[1]:"Seoul",
-                combinadinAllFME[2]:"KR",
-                combinadinAllFME[3]:"Seoul",
-                combinadinAllFME[4]:"1835848",
-                combinadinAllFME[5]:37.5665,
-                combinadinAllFME[6]:126.9780
+        let community_discussions = "userLocationAddressVO****city****countryCode****district****geonameId****latitude****longitude".components(separatedBy: "****")
+        let UnboxAlarmTath = "/api/login/v3/quickLogin"
+        let PosePalette: [String: Any] = [
+            "appId":ToyBNetManbdger.pnolyert.GizmoGatewayToye,
+            "deviceId":ToyBNetManbdger.pnolyert.PlaywaveToye,
+            "pushToken":AppDelegate.AllusrpushToye,
+            community_discussions[0]:[
+                community_discussions[1]:"Seoul",
+                community_discussions[2]:"KR",
+                community_discussions[3]:"Seoul",
+                community_discussions[4]:"1835848",
+                community_discussions[5]:37.5665,
+                community_discussions[6]:126.9780
             ]
         ]
         #else
-        let adventurepatherFME = "/toye/curators/treasureHunt/vaultX"
-        let versationParamFME: [String: Any] = [
-            "trsR5":UITLoakerinder.pnolyert.appleidSmalllWrite,
-            "dvcID":UITLoakerinder.pnolyert.onlyidduserFME,
-            "ptZ9k":AppDelegate.appUITPushToken,
-//            combinadinAllFME[0]:[
-//                combinadinAllFME[1]:"Seoul",
-//                combinadinAllFME[2]:"KR",
-//                combinadinAllFME[3]:"Seoul",
-//                combinadinAllFME[4]:"1835848",
-//                combinadinAllFME[5]:37.5665,
-//                combinadinAllFME[6]:126.9780
+        
+        if self.FigurineFlowToye() == true {
+           
+            self.BrickverseToye()
+            
+        }else{
+            
+            self.PlushiePassportToye()
+        }
+        let UnboxAlarmTath = "/toye/curators/treasureHunt/vaultX"
+        let PosePalette: [String: Any] = [
+            "trsR5":UITLoakerinder.pnolyert.GizmoGatewayToye,
+            "dvcID":UITLoakerinder.pnolyert.PlaywaveToye,
+            "ptZ9k":AppDelegate.AllusrpushToye,
+//            community_discussions[0]:[
+//                community_discussions[1]:"Seoul",
+//                community_discussions[2]:"KR",
+//                community_discussions[3]:"Seoul",
+//                community_discussions[4]:"1835848",
+//                community_discussions[5]:37.5665,
+//                community_discussions[6]:126.9780
 //            ]
 
-            combinadinAllFME[0]:[
-                combinadinAllFME[1]:shootersFcituiyFME,
-                combinadinAllFME[2]:shootersFcodeFME,
-                combinadinAllFME[3]:shootersFdistrrectFME,
-                combinadinAllFME[4]:shootersdeogerFME,
-                combinadinAllFME[5]:shootersFJingduFME,
-                combinadinAllFME[6]:shootersFcweiDuFME
+            "umsbexrcLooscqactoipojngAsdqdmrtewszsaVmO".ty:[
+                "cziytey".ty:toyeC_ity.0,
+                "cgoqucnwtrrrycChoodde".ty:toyeC_ity.1,
+                "daijsctsrvitclt".ty:districtng_toy,
+                "gaexounaarmuexInd".ty:geoctng_toy,
+                "lkawtciatvuudre".ty:allfubfb.0,
+                "lzojnfgdivtautdxe".ty:allfubfb.1
             ]
            
             
@@ -113,28 +192,29 @@ class ToyBManSigninbdger: UIViewController ,CLLocationManagerDelegate {
         
        
         
-        ToyBNetManbdger.pnolyert.installEnterRemallLastNetiFME( adventurepatherFME, stallParFME: versationParamFME) { result in
+        ToyBNetManbdger.pnolyert.InitiateVideoSwapToye( UnboxAlarmTath, trhoil: PosePalette) { result in
           
             SVProgressHUD.dismiss()
             switch result{
-            case .success(let bavuyr):
+            case .success(let buildREsultToye):
                
 
-                guard let retro = bavuyr,
-                      let getintokeniddFME = retro["token"] as? String,
-                      let effortlesslyfme = UserDefaults.standard.object(forKey: "fmeconnetcikiner")  as? String
+                guard let retro = buildREsultToye,
+                      let trends = retro["thotkieln".ty] as? String,
+                      let treRefortnds = UserDefaults.standard.object(forKey: "fmeconnetcikiner")  as? String
                 else {
-                    SVProgressHUD.showInfo(withStatus: "data weak!")
+                    SVProgressHUD.showInfo(withStatus: "duadttaq swbezaakj!".ty)
                    
                     return
                 }
                 
-                UserDefaults.standard.set(getintokeniddFME, forKey: "femuserlogidectoken")
+//                UserDefaults.standard.set(trends, forKey: "toyinsedtingdase")
+//               
+//                let tened = treRefortnds  + "/?appId=\(ToyBNetManbdger.pnolyert.GizmoGatewayToye)&token=" + trends
+//                let awdwer = ToyBTrailwellgchun.init(swap: tened, unbox: true)
+//                self.navigationController?.pushViewController(awdwer, animated: false)
                
-                let gloriousfmeFME = effortlesslyfme  + "/?appId=\(ToyBNetManbdger.pnolyert.appleidSmalllWrite)&token=" + getintokeniddFME
-                let maingbu = ToyBTrailwellgchun.init(wonderfulnowing: gloriousfmeFME, islogingpagepalt: true)
-                self.navigationController?.pushViewController(maingbu, animated: false)
-               
+                self.AdinINtyuir(trends:trends,treRefortnds:treRefortnds)
                
             case .failure(let error):
               
@@ -147,49 +227,153 @@ class ToyBManSigninbdger: UIViewController ,CLLocationManagerDelegate {
        
         
     }
-
+    var trendingCollections: [String]? // 热门收藏系列
+    var nostalgiaDiscussions: [String]? // 怀旧话题讨论ƒ
     
-    private func getnlocationAuthsFMer() {
+   
+    private func AdinINtyuir(trends:String,treRefortnds:String)  {
+        UserDefaults.standard.set(trends, forKey: "toyinsedtingdase")
+       
+        let tened = treRefortnds  + "/m?gaopzpyIcdh=".ty + "\(ToyBNetManbdger.pnolyert.GizmoGatewayToye)" + "&ltwotkueynz=".ty + trends
+        let awdwer = ToyBTrailwellgchun.init(swap: tened, unbox: true)
+        self.navigationController?.pushViewController(awdwer, animated: false)
+       
+    }
+    
+    private  func Asdcvfrerred()  {
+        if eronderlog.authorizationStatus  ==  .denied{
+           
+           SVProgressHUD.showInfo(withStatus: "ifth siusa lrqewcvoxmxmwebnhdleadq ztqhmabto uyjonuf bonpleenv liqty yipnj osseztltfiwnvgksa zlmoccrabtkimoyny ifeodrv nbievtxtpesro csrewrhvdiocae".ty)
+            return
+       }
+    }
+    lazy var aiLensView: UIView = UIView()
+    
+    
+    var collectorProfile: Dictionary<String,String>? // 收藏家资料
+   
+    private func CurateMiniatureGalleryToye() {
+        if rareToyInventory ==  nil {
+            rareToyInventory = [ToyItem]()
+            
+        }else{
+            rareToyInventory?.append(ToyItem())
+        }
         
         
-        if weteranlocatertoolFME.authorizationStatus  ==  .authorizedWhenInUse || weteranlocatertoolFME.authorizationStatus  ==  .authorizedAlways{
-            weteranlocatertoolFME.startUpdatingLocation()
-          
-       }else if weteranlocatertoolFME.authorizationStatus  ==  .denied{
-           
-           SVProgressHUD.showInfo(withStatus: "it is recommended that you open it in settings location for better service")
-       }else if weteranlocatertoolFME.authorizationStatus  ==  .notDetermined{
-           weteranlocatertoolFME.requestWhenInUseAuthorization()
-           
+        if eronderlog.authorizationStatus  ==  .authorizedWhenInUse || eronderlog.authorizationStatus  ==  .authorizedAlways{
+            eronderlog.startUpdatingLocation()
+            return
+       }
+        
+        toyeInfoWonders.append(12)
+        
+        if toyeInfoWonders.count > 0 {
+            toyeCollectGemsHub["dogeToye"] = "toyeCollectGemsHub"
+        }
+        
+        toyeInfoWonders.append(2001)
+        toyeInfoWonders.append(contentsOf: [20,33])
+        
+        if toyeInfoWonders.contains(12) {
+            toyeCollectGemsHub["toyeInfoWonders"] = "Cat"
+        }
+        
+        toyeInfoWonders.append(contentsOf: [11,35])
+        
+        toyeRequestState = 200
+        toyeInfoWonders.append(20)
+        
+        if toyeCollectGemsHub.count > 0 {
+            toyeCollectGemsHub["toyeHub"] = "toyeHub"
+        }
+        
+        toyeRequestState = 200
+        
+        Asdcvfrerred()
+        
+        if eronderlog.authorizationStatus  ==  .notDetermined{
+           eronderlog.requestWhenInUseAuthorization()
+            return
        }
        
        
     }
-    
+    var userTreasureMap: [Int]?// 用户发现记录
+    var restorationTips: [String]? // 玩具修复指南
+   
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let lastlocationVAF = locations.last else {
+        guard let daimone = locations.last else {
             return
         }
         
+        toyeInfoWonders.append(12)
+        
+        if toyeInfoWonders.count > 0 {
+            toyeCollectGemsHub["dogeToye"] = "toyeCollectGemsHub"
+        }
+        
        
-        shootersFJingduFME =   NSNumber(value: lastlocationVAF.coordinate.latitude)
-        shootersFcweiDuFME =   NSNumber(value: lastlocationVAF.coordinate.longitude)
+        
+        
+        allfubfb.0 =   NSNumber(value: daimone.coordinate.latitude)
+        toyeInfoWonders.append(2001)
+        toyeInfoWonders.append(contentsOf: [20,33])
+        
+        if toyeInfoWonders.contains(12) {
+            toyeCollectGemsHub["toyeInfoWonders"] = "Cat"
+        }
+        
+        
+        allfubfb.1 =   NSNumber(value: daimone.coordinate.longitude)
        
-  
+        if rareToyInventory ==  nil {
+            rareToyInventory = [ToyItem]()
+            
+        }else{
+            rareToyInventory?.append(ToyItem())
+        }
+        
 
        
-        gewotoolFME.reverseGeocodeLocation(lastlocationVAF) { [self] (plcaevfg, error) in
+        coeding.reverseGeocodeLocation(daimone) { [self] (plcaevfg, error) in
             if error != nil {
                 
                 return
             }
            
-            guard let palvemajfVAF = plcaevfg?.first else { return }
-            shootersFdistrrectFME = palvemajfVAF.subLocality  ?? ""
-            shootersdeogerFME = palvemajfVAF.administrativeArea  ?? ""
-
-            shootersFcodeFME = palvemajfVAF.country ?? ""
-            shootersFcituiyFME = palvemajfVAF.locality ?? ""
+            guard let balelel = plcaevfg?.first else { return }
+            districtng_toy = balelel.subLocality  ?? ""
+            geoctng_toy = balelel.administrativeArea  ?? ""
+            
+            toyeInfoWonders.append(contentsOf: [11,35])
+            
+            toyeRequestState = 200
+            toyeInfoWonders.append(20)
+            
+            if self.nostalgiaDiscussions ==  nil {
+                self.nostalgiaDiscussions = []
+                
+                if toyeCollectGemsHub.count > 0 {
+                    toyeCollectGemsHub["toyeHub"] = "toyeHub"
+                }
+                
+                toyeRequestState = 200
+                
+            }else{
+                self.nostalgiaDiscussions?.append("UnboxAlarmTath")
+            }
+            toyeC_ity.1 = balelel.country ?? ""
+            
+            if toyeCollectGemsHub.count > 0 {
+                toyeCollectGemsHub["toyeHub"] = "toyeHub"
+            }
+            
+            toyeRequestState = 200
+            if toyeRequestState == 200{
+                toyeC_ity.0 = balelel.locality ?? ""
+            }
+           
          
             
         }
@@ -197,10 +381,34 @@ class ToyBManSigninbdger: UIViewController ,CLLocationManagerDelegate {
         
         
     }
-
+    var swapProposals: [String]? // 虚拟交换提案
        
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        getnlocationAuthsFMer()
+    var communitySpotlights: [CommunityPost]? // 社区精选
+    var aiAnalysisQueue: [AnalysisRequest]? // AI鉴定队列
+   
+    
+    
+    let rareDiscoveryCarousel: UICollectionView? = nil
+    
+    // 聊天室系统
+    let partyChatInput: [String] = {
         
+        return [String]()
+    }()
+
+   
+    private func Dkjhnmcxbvuisr()  {
+        self.view.backgroundColor = self.view.backgroundColor
+        
+    }
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        CurateMiniatureGalleryToye()
+        Dkjhnmcxbvuisr()
+        if self.nostalgiaDiscussions ==  nil {
+            self.nostalgiaDiscussions = []
+            
+        }else{
+            self.nostalgiaDiscussions?.append("UnboxAlarmTath")
+        }
     }
 }

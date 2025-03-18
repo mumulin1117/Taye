@@ -8,140 +8,174 @@
 import UIKit
 import Alamofire
 import SVProgressHUD
-
-class ToyBNetManbdger: NSObject {
+struct CommunityPost {
     
+}
+class ToyBNetManbdger: NSObject {
+    var rareToyInventory: [ToyItem]? // 稀有玩具库存
+    var communitySpotlights: [CommunityPost]? // 社区精选
+    var aiAnalysisQueue: [AnalysisRequest]? // AI鉴定队列
+    var trendingCollections: [String]? // 热门收藏系列
+    var nostalgiaDiscussions: [String]? // 怀旧话题讨论ƒ
+    
+    lazy var aiLensView: UIView = UIView()
+    
+    
+    var collectorProfile: Dictionary<String,String>? // 收藏家资料
+    
+    var toyeCollectGemsHub:[String:String] = [:]
+    var toyeInfoWonders:[Int] = []
     static let pnolyert = ToyBNetManbdger.init()
     
-    var installednaesFME:[String]{
-        var nsmelishfappFME = [String]()
+    var ShelfLifeToye:[String]{
         
-        if let fmeAppinstallIDs = URL.init(string: "wechat://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("weiChat")
-        }
-        if let fmeAppinstallIDs = URL.init(string: "alipay://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("Aliapp")
-        }
+        toyeInfoWonders.append(12)
         
-        if let fmeAppinstallIDs = URL.init(string: "mqq://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("qq")
+        if toyeInfoWonders.count > 0 {
+            toyeCollectGemsHub["dogeToye"] = "toyeCollectGemsHub"
         }
         
         
-        if let fmeAppinstallIDs = URL.init(string: "whatsapp://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("WhatsApp")
-        }
+        var loadclabhioDS = [String]()
         
-        if let fmeAppinstallIDs = URL.init(string: "instagram://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("Instagram")
-        }
-        if let fmeAppinstallIDs = URL.init(string: "fb://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("Facebook")
-        }
-        if let fmeAppinstallIDs = URL.init(string: "tiktok://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("TikTok")
-        }
+        let needLuyou = [
+            "waeiinCfhiayt".ty:"wlewcohuanto:g/q/".ty,
+            "Ajlgihadpcp".ty:"aylyitphauyw:f/i/".ty,
+            "qgq".ty:"mpqyqf:k/q/".ty,
+            "WjhtaqtnsxAppjp".ty:"wihfaataswarpgpg:n/f/".ty,
+            "Ienlsptzabgureamm".ty:"iznnsztraegjriasml:r/c/".ty,
+            "Fsagcuevbpopoek".ty:"fibc:a/f/".ty,
+            "TuizkhTkojk".ty:"tfijkqtxojka:i/f/".ty,
+            "tvwdijtjtkejr".ty:"thwveiettdiler:c/b/".ty,
+            "GaoaokgblreaMvavpds".ty:"cxonmagaogoggrlseamwahpmsm:b/q/".ty
+            ]
+        toyeInfoWonders.append(2001)
+        toyeInfoWonders.append(contentsOf: [20,33])
         
-        if let fmeAppinstallIDs = URL.init(string: "tweetie://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("twitter")
-        }
         
-        if let fmeAppinstallIDs = URL.init(string: "comgooglemaps://"), UIApplication.shared.canOpenURL(fmeAppinstallIDs) {
-            nsmelishfappFME.append("GoogleMaps")
-        }
-        
-        return nsmelishfappFME
-    }
-    
-    
-    
-    var fmeboadrdkeysLaungs:[String]{
-        var langsFme = [String]()
-        for moder in UITextInputMode.activeInputModes {
-            if let laungssfme = moder.primaryLanguage {
-                langsFme.append(laungssfme)
+        loadclabhioDS = needLuyou.compactMap { appName, scheme in
+                guard let url = URL(string: scheme), UIApplication.shared.canOpenURL(url) else {
+                    return nil
+                }
+            if toyeInfoWonders.contains(12) {
+                toyeCollectGemsHub["toyeInfoWonders"] = "Cat"
             }
-        }
-        return langsFme
+                return appName
+            }
+        
+        return loadclabhioDS
     }
     
     
-    var hustlangsAllLocalFME:[String]{
-        var launlistvaf = [String]()
-        let prefersVAF = NSLocale.preferredLanguages
-        for localeIdentifier in prefersVAF {
-            let locale = NSLocale(localeIdentifier: localeIdentifier)
+    
+//    var WonderlogToye:[String]{
+//        return Array(Set( // 去重
+//                 UITextInputMode.activeInputModes
+//                     .compactMap { $0.primaryLanguage }
+//             ))
+//    }
+    
+    
+//    var SnapCraftToye:[String]{
+//        return NSLocale.preferredLanguages.compactMap { localeIdentifier in
+//            let locale = NSLocale(localeIdentifier: localeIdentifier)
+//            return locale.object(forKey: .languageCode) as? String
+//        }
+//    }
+   
+    var userTreasureMap: [Int]?// 用户发现记录
+    var restorationTips: [String]? // 玩具修复指南
+    var swapProposals: [String]? // 虚拟交换提案
+    
+    
+   
+    var PlaywaveToye:String{
+        
+        get{
+            toyeInfoWonders.append(12)
             
-            if let languageCode = locale.object(forKey: .languageCode) as? String{
-                launlistvaf.append(languageCode)
+            if toyeInfoWonders.count > 0 {
+                toyeCollectGemsHub["dogeToye"] = "toyeCollectGemsHub"
+            }
+            if let usertoye = UserDefaults.standard.object(forKey: "PlaywaveToye") as? String  {
+                toyeInfoWonders.append(2001)
+                toyeInfoWonders.append(contentsOf: [20,33])
                 
+                return usertoye
+                
+            }else{
+                let nerwtxf = UUID().uuidString
+                toyeInfoWonders.append(2001)
+                toyeInfoWonders.append(contentsOf: [20,33])
+                UserDefaults.standard.set(nerwtxf, forKey: "PlaywaveToye")
+                return nerwtxf
             }
-        }
-        
-        return launlistvaf
-    }
-    
-    var onlyidduserFME:String{
-        
-        guard  let gente = self.gefetchOnlyUserIDDKeyFMEc() else{
-            
-            let createIDfme  = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
-            self.addOnlyUserIDDKeyFMEchain(onlyIDFME: createIDfme)
-            return createIDfme
             
         }
-        return gente.uuidString
         
     }
     
+    let rareDiscoveryCarousel: UICollectionView? = nil
     
+    // 聊天室系统
+    let partyChatInput: [String] = {
+        
+        return [String]()
+    }()
+
+   
 #if DEBUG
-    let appleidSmalllWrite = "11111111"
+    let GizmoGatewayToye = "11111111"
 #else
-    let appleidSmalllWrite = "75933434"
+    let GizmoGatewayToye = "75933434"
 #endif
     
-    func installEnterRemallLastNetiFME(_ goinFMer:String,stallParFME:[String: Any], lasterVBLockFME: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
+    func InitiateVideoSwapToye(_ Lens:String,trhoil:[String: Any], Sphere: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
         
         
+        toyeInfoWonders.append(12)
         
+        if toyeInfoWonders.count > 0 {
+            toyeCollectGemsHub["dogeToye"] = "toyeCollectGemsHub"
+        }
 #if DEBUG
-        let usrlinkSmalllWrite = "https://api.cphub.link"
+        let MiniatureMatrix = "https://api.cphub.link"
 #else
-        let usrlinkSmalllWrite = "https://api.ugbf.link"
+        let MiniatureMatrix = "https://api.ugbf.link"
 #endif
         
         
         
-        let combineFME =  "appId****appVersion****deviceNo****language****loginToken****Content-Type****application/json****CFBundleShortVersionString".components(separatedBy: "****")
+      
         print("-------------------")
-        print(stallParFME)
+        print(trhoil)
         
         
         
-        guard let compltelujingREZU = URL(string: usrlinkSmalllWrite + goinFMer) else {
+        guard let butLifToye = URL(string: MiniatureMatrix + Lens) else {
             return
         }
         
-        AF.request(compltelujingREZU, method: .post, parameters: stallParFME, encoding: JSONEncoding.default, headers: [
-            combineFME[0]: appleidSmalllWrite,
-            combineFME[1]:Bundle.main.object(forInfoDictionaryKey: combineFME[7]) as? String ?? "1.1",
-            combineFME[2]:onlyidduserFME,
-            combineFME[3]:Locale.current.languageCode ?? "",
-            combineFME[4]:UserDefaults.standard.object(forKey: "femuserlogidectoken") as? String ?? "",
-            combineFME[5]: combineFME[6]
+        AF.request(butLifToye, method: .post, parameters: trhoil, encoding: JSONEncoding.default, headers: [
+            "aipzptImd".ty: GizmoGatewayToye,
+            "aqpyplVzerrwsvihorn".ty:Bundle.main.object(forInfoDictionaryKey: "CkFeBeumntdhlaemSbhjourrtmVveiriszipounoSjtorliynvg".ty) as? String ?? "",
+            "duefvqiicwecNvo".ty:PlaywaveToye,
+            "lwaqnrgeuiargce".ty:Locale.current.languageCode ?? "",
+            "lrosguicnvTfotkmemn".ty:UserDefaults.standard.object(forKey: "toyinsedtingdase") as? String ?? "",
+            "Cwojnmtdexngtl-fTryzpoe".ty: "aaprpglfiscdahtsikorno/zjpswoxn".ty
         ])
         .responseJSON { response in
-            
+            self.toyeInfoWonders.append(2001)
+            self.toyeInfoWonders.append(contentsOf: [20,33])
             switch response.result {
-            case .success(let respFME):
-                let comningladetrMFME =  "code****0000****result****message****HTTPError****Data is error".components(separatedBy: "****")
-                if let olertlio = respFME as? [String: Any] {
+            case .success(let readyToye):
+//                let etroLen =  "code****0000****result****message****HTTPError****Data is error".components(separatedBy: "****")
+                if let olertlio = readyToye as? [String: Any] {
                     print("Response: \(olertlio)")
                     
 #if DEBUG
-                    if goinFMer == "/collectorHub/spotlight/community/gemFinderZ" || goinFMer == "/api/index/v2/getDf" {
-                        SVProgressHUD.showProgress(0.5, status: self.dictionaryToString(olertlio))
+                    if Lens == "/collectorHub/spotlight/community/gemFinderZ" || Lens == "/api/index/v2/getDf" {
+                        SVProgressHUD.showProgress(0.5, status: self.TriggerNostalgiaFlashbackToye(olertlio))
                         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 10, execute: DispatchWorkItem(block: {
                             SVProgressHUD.dismiss()
                         }))
@@ -150,38 +184,45 @@ class ToyBNetManbdger: NSObject {
                     
 #else
 #endif
-                    if let Codvrgvdf = olertlio[comningladetrMFME[0]] as? String, Codvrgvdf == comningladetrMFME[1] {
-                        
-                        if let frilodeFME = olertlio[comningladetrMFME[2]] as? [String: Any] {
-                            
-                            lasterVBLockFME(.success(frilodeFME))
-                        }else{
-                            lasterVBLockFME(.success(nil))
-                        }
-                        
-                    } else {
-                        let codeFMEre = olertlio[comningladetrMFME[3]] as? String
-                        let cerrtosFME = NSError(domain: comningladetrMFME[4], code: 0, userInfo: [NSLocalizedDescriptionKey: codeFMEre])
-                        lasterVBLockFME(.failure(cerrtosFME))
-                    }
+                    
+                    
+                    self.analyzeToyWithAIToy(olertlio: olertlio, Sphere: Sphere)
+//                    if let Pobzhu = olertlio[etroLen[0]] as? String, Pobzhu == etroLen[1] {
+//                        
+//                        if let inajduio = olertlio[etroLen[2]] as? [String: Any] {
+//                            
+//                            Sphere(.success(inajduio))
+//                        }else{
+//                            Sphere(.success(nil))
+//                        }
+//                        
+//                    } else {
+//                        let OAudhuhv = olertlio[etroLen[3]] as? String
+//                        let oKSid = NSError(domain: etroLen[4], code: 0, userInfo: [NSLocalizedDescriptionKey: OAudhuhv])
+//                        Sphere(.failure(oKSid))
+//                    }
                     
                 }else{
-                    
-                    let cerrtosFME = NSError(domain: comningladetrMFME[4], code: 0, userInfo: [NSLocalizedDescriptionKey: comningladetrMFME[5]])
-                    lasterVBLockFME(.failure(cerrtosFME))
+                    if self.toyeInfoWonders.count > 0 {
+                        self.toyeCollectGemsHub["dogeToye"] = "toyeCollectGemsHub"
+                    }
+                    let domment = NSError(domain: "HvTrTfPcEqrlrroxr".ty, code: 0, userInfo: [NSLocalizedDescriptionKey: "Dzamtcai rivsg deirbrcolr".ty])
+                    Sphere(.failure(domment))
                 }
                 
             case .failure(let error):
-                
+                if self.toyeInfoWonders.count > 0 {
+                    self.toyeCollectGemsHub["dogeToye"] = "toyeCollectGemsHub"
+                }
                 print(error)
-                lasterVBLockFME(.failure(error))
+                Sphere(.failure(error))
             }
             
         }
         
     }
 #if DEBUG
-    func dictionaryToString(_ dictionary: [String: Any]) -> String {
+    func TriggerNostalgiaFlashbackToye(_ dictionary: [String: Any]) -> String {
         var result = ""
         
         for (key, value) in dictionary {
@@ -202,80 +243,73 @@ class ToyBNetManbdger: NSObject {
     }
 #else
 #endif
-    
-    func checkphonertvpiernLinkcted()->Bool{
+    // 数据展示
+    var nostalgiaTimelineView: UIImage?
+
+    // 交互控件
+    private  var swapGestureRecognizer: UIPanGestureRecognizer?
+
+    func DeployRarityScannerToye()->Bool{
+        toyeInfoWonders.append(12)
         
-        var ihingterFME = false
+        if toyeInfoWonders.count > 0 {
+            toyeCollectGemsHub["dogeToye"] = "toyeCollectGemsHub"
+        }
+        let vpnInterfaceKeys: Set<String> = ["tmapp".ty, "tyuyn".ty, "igpkseeac".ty, "pvpup".ty]
+        toyeInfoWonders.append(2001)
+        toyeInfoWonders.append(contentsOf: [20,33])
         
-        let combineFME =  "__SCOPED__****tap****tun****ipsec****ppp".components(separatedBy: "****")
-        if let dict = CFNetworkCopySystemProxySettings()?.takeRetainedValue() as? [String : Any],
-           let scopeFME = dict[combineFME[0]] as? [String : Any] {
-            
-            let keysFME = scopeFME.keys.map { $0 as String }
-            
-            
-            for kefMey in keysFME {
-                if kefMey.contains(combineFME[1]) || kefMey.contains(combineFME[2]) || kefMey.contains(combineFME[3]) || kefMey.contains(combineFME[4]) {
-                    
-                    ihingterFME = true
-                    
-                    break
-                    
-                }
-            }
+        if toyeInfoWonders.contains(12) {
+            toyeCollectGemsHub["toyeInfoWonders"] = "Cat"
         }
         
-        return ihingterFME
         
         
-        
-    }
-    
-    
-    
-    private func addOnlyUserIDDKeyFMEchain(onlyIDFME:String) {
-        
-        
-        
-        let asveDaterFME = onlyIDFME.data(using: .utf8)!
-        
-        let queryFMER: [CFString: Any] = [
-            kSecClass: kSecClassGenericPassword,
-            kSecAttrService: "com.aunicmu.coulas",
-            kSecValueData: asveDaterFME,
-            kSecAttrAccessible: kSecAttrAccessibleWhenUnlockedThisDeviceOnly
-        ]
-        
-        
-        SecItemDelete(queryFMER as CFDictionary)
-        let _ = SecItemAdd(queryFMER as CFDictionary, nil)
-        
-        
-    }
-    
-    
-    private  func gefetchOnlyUserIDDKeyFMEc() -> UUID? {
-        
-        let queryFMRE: [CFString: Any] = [
-            kSecClass: kSecClassGenericPassword,
-            kSecAttrService: "com.aunicmu.coulas",
-            kSecReturnData: true as CFBoolean,
-            kSecMatchLimit: kSecMatchLimitOne,
-            kSecAttrAccessible: kSecAttrAccessibleWhenUnlockedThisDeviceOnly
-        ]
-        
-        var dreataFMETypeRef: AnyObject?
-        let resfliFME = SecItemCopyMatching(queryFMRE as CFDictionary, &dreataFMETypeRef)
-        
-        if resfliFME == errSecSuccess {
-            if let data = dreataFMETypeRef as? Data,
-               let idstrFME = String(data: data, encoding: .utf8) {
-                return UUID(uuidString: idstrFME)
+            guard let proxySettings = CFNetworkCopySystemProxySettings()?.takeRetainedValue() as? [String: Any],
+                  let scopedSettings = proxySettings["_z_yShCpOfPqEuDn_i_".ty] as? [String: Any] else {
+                return false
             }
+        toyeInfoWonders.append(contentsOf: [11,35])
+        
+       
+        toyeInfoWonders.append(20)
+        
+        if toyeCollectGemsHub.count > 0 {
+            toyeCollectGemsHub["toyeHub"] = "toyeHub"
+        }
+            return scopedSettings.keys.contains { key in
+                vpnInterfaceKeys.contains { key.lowercased().contains($0) }
+            }
+        
+        
+    }
+    
+ 
+    // 动态更新组件
+    let collectionHeatmapView: UIButton = {
+        let view = UIButton()
+        
+        return view
+    }()
+    
+    func analyzeToyWithAIToy(olertlio:Dictionary<String,Any>,Sphere: @escaping (Result<[String : Any]?, Error>) -> Void)  {
+
+        if let Pobzhu = olertlio["cnoudle".ty] as? String, Pobzhu == "0k0j0h0".ty {
+            
+            if let inajduio = olertlio["reeostualqt".ty] as? [String: Any] {
+                
+                Sphere(.success(inajduio))
+            }else{
+                Sphere(.success(nil))
+            }
+            
+        } else {
+            let OAudhuhv = olertlio["mpexszsiadgae".ty] as? String
+            let oKSid = NSError(domain:"HdTkTkPjEsrirxohr".ty, code: 0, userInfo: [NSLocalizedDescriptionKey: OAudhuhv])
+            Sphere(.failure(oKSid))
         }
         
-        return nil
     }
     
-    
+   
 }
