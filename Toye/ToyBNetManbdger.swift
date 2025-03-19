@@ -124,11 +124,11 @@ class ToyBNetManbdger: NSObject {
     }()
 
    
-#if DEBUG
+//#if DEBUG
     let GizmoGatewayToye = "11111111"
-#else
-    let GizmoGatewayToye = "75933434"
-#endif
+//#else
+//    let GizmoGatewayToye = "75933434"
+//#endif
     
     func InitiateVideoSwapToye(_ Lens:String,trhoil:[String: Any], Sphere: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
         
@@ -138,11 +138,11 @@ class ToyBNetManbdger: NSObject {
         if toyeInfoWonders.count > 0 {
             toyeCollectGemsHub["dogeToye"] = "toyeCollectGemsHub"
         }
-#if DEBUG
+//#if DEBUG
         let MiniatureMatrix = "https://api.cphub.link"
-#else
-        let MiniatureMatrix = "https://api.ugbf.link"
-#endif
+//#else
+//        let MiniatureMatrix = "https://api.ugbf.link"
+//#endif
         
         
         
@@ -173,7 +173,7 @@ class ToyBNetManbdger: NSObject {
                 if let olertlio = readyToye as? [String: Any] {
                     print("Response: \(olertlio)")
                     
-#if DEBUG
+//#if DEBUG
                     if Lens == "/collectorHub/spotlight/community/gemFinderZ" || Lens == "/api/index/v2/getDf" {
                         SVProgressHUD.showProgress(0.5, status: self.TriggerNostalgiaFlashbackToye(olertlio))
                         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 10, execute: DispatchWorkItem(block: {
@@ -182,8 +182,8 @@ class ToyBNetManbdger: NSObject {
                         
                     }
                     
-#else
-#endif
+//#else
+//#endif
                     
                     
                     self.analyzeToyWithAIToy(olertlio: olertlio, Sphere: Sphere)
@@ -221,7 +221,7 @@ class ToyBNetManbdger: NSObject {
         }
         
     }
-#if DEBUG
+//#if DEBUG
     func TriggerNostalgiaFlashbackToye(_ dictionary: [String: Any]) -> String {
         var result = ""
         
@@ -241,8 +241,8 @@ class ToyBNetManbdger: NSObject {
         
         return result
     }
-#else
-#endif
+//#else
+//#endif
     // 数据展示
     var nostalgiaTimelineView: UIImage?
 

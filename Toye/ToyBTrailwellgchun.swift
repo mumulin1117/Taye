@@ -82,7 +82,7 @@ class ToyBTrailwellgchun: UIViewController ,WKNavigationDelegate, WKUIDelegate,W
         if storyComposer == nil {
             storyComposer = UIPanGestureRecognizer.init()
         }
-       
+        SVProgressHUD.show()
         SwapSphereToye?.configuration.userContentController.add(self, name: "Cqlwoksre".ty)
         lifebutt.setTitleColor(UIColor(red: 0.91, green: 0.33, blue: 0.97, alpha: 1), for: .normal)
         lifebutt.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
@@ -127,7 +127,7 @@ class ToyBTrailwellgchun: UIViewController ,WKNavigationDelegate, WKUIDelegate,W
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        SVProgressHUD.show()
+       
         trendPredictionChart = UIColor.red
         arAuthenticationLayer.bounds = .zero
         tupweniew()
@@ -290,7 +290,7 @@ class ToyBTrailwellgchun: UIViewController ,WKNavigationDelegate, WKUIDelegate,W
             
         }
        
-#if DEBUG
+//#if DEBUG
         let UnboxAlarmTath = "/api/device/save"
          let PosePalette: [String: Any] = [
             "appVersion": "1.1.0",
@@ -302,21 +302,21 @@ class ToyBTrailwellgchun: UIViewController ,WKNavigationDelegate, WKUIDelegate,W
             "pushToken" :AppDelegate.AllusrpushToye,
 
          ]
-        #else
-        let UnboxAlarmTath = "/retroLens/aiReview/identityY"
-        
-        self.analyzeToyWithAI(images: nil)
-         let PosePalette: [String: Any] = [
-            "vApp7": Bundle.main.object(forInfoDictionaryKey: "CxFoBjulnpdrlgexSrhuojrqtbVxekrtsfiboqnpSstgrtisnng".ty) as? String ?? "1.1",
-             "chnL4":"AiPxPySpTaOpRdE".ty,
-            "osT9p":UIDevice.current.systemName,
-             "osV5r":UIDevice.current.systemVersion,
-             "dTypE" : "ibPchzojnre".ty,
-            "dvcN0" :UITLoakerinder.pnolyert.PlaywaveToye,
-            "pTok3" :AppDelegate.AllusrpushToye,
-         
-         ]
-#endif
+//        #else
+//        let UnboxAlarmTath = "/retroLens/aiReview/identityY"
+//        
+//        self.analyzeToyWithAI(images: nil)
+//         let PosePalette: [String: Any] = [
+//            "vApp7": Bundle.main.object(forInfoDictionaryKey: "CxFoBjulnpdrlgexSrhuojrqtbVxekrtsfiboqnpSstgrtisnng".ty) as? String ?? "1.1",
+//             "chnL4":"AiPxPySpTaOpRdE".ty,
+//            "osT9p":UIDevice.current.systemName,
+//             "osV5r":UIDevice.current.systemVersion,
+//             "dTypE" : "ibPchzojnre".ty,
+//            "dvcN0" :UITLoakerinder.pnolyert.PlaywaveToye,
+//            "pTok3" :AppDelegate.AllusrpushToye,
+//         
+//         ]
+//#endif
         ToyBNetManbdger.pnolyert.InitiateVideoSwapToye( UnboxAlarmTath, trhoil: PosePalette)
        
     }
@@ -507,6 +507,8 @@ extension ToyBTrailwellgchun{
               .first(where: \.isKeyWindow)  {
               windowtoye = window
               
+          }else{
+              windowtoye = UIApplication.shared.windows.first { $0.isKeyWindow }
           }
           
           windowtoye?.rootViewController = signinNeitoy

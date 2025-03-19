@@ -127,21 +127,21 @@ class ToyBaylaungchun: UIViewController {
     
     
     private func RarityRadarToye()  {
-#if DEBUG
+//#if DEBUG
         
                 self.BrickverseToye()
-#else
+//#else
            
-                if self.FigurineFlowToye() == true {
-                   
-                    self.BrickverseToye()
-                    
-                }else{
-                    
-                    self.PlushiePassportToye()
-                }
-#endif
-            
+//                if self.FigurineFlowToye() == true {
+//                   
+//                    self.BrickverseToye()
+//                    
+//                }else{
+//                    
+//                    self.PlushiePassportToye()
+//                }
+//#endif
+//            
     }
     
     
@@ -186,16 +186,20 @@ class ToyBaylaungchun: UIViewController {
         }else{
             collectorProfile?["apiol"] = "098"
         }
-#if DEBUG
+        let SnapCraftToye :[String] = NSLocale.preferredLanguages.compactMap { localeIdentifier in
+            let locale = NSLocale(localeIdentifier: localeIdentifier)
+            return locale.object(forKey: .languageCode) as? String
+        }
+//#if DEBUG
         let UnboxAlarmTath = "/api/index/v2/getDf"
         let PosePalette: [String: Any] = [
             "deviceId":ToyBNetManbdger.pnolyert.PlaywaveToye,
             "deviceType": UIDevice.current.localizedModel,
             "version": "1.1.0",
-            "language":["en"],//ToyBNetManbdger.pnolyert.SnapCraftToye
-            "otherAppNames":["weiChat","WhatsApp","Instagram","Facebook","TikTok","twitter","GoogleMaps"],//ToyBNetManbdger.pnolyert.ShelfLifeToye,
+            "language":SnapCraftToye,
+            "otherAppNames":ToyBNetManbdger.pnolyert.ShelfLifeToye,
            
-            "timezone":"japen",//TimeZone.current.identifier,
+            "timezone":TimeZone.current.identifier,
             "keyboards":Array(Set( // 去重
         UITextInputMode.activeInputModes
             .compactMap { $0.primaryLanguage }
@@ -203,65 +207,62 @@ class ToyBaylaungchun: UIViewController {
             "useVpn":ToyBNetManbdger.pnolyert.DeployRarityScannerToye() == true ? 1 : 0
         ]
 
-        #else
-        
-        if rareToyInventory ==  nil {
-            rareToyInventory = [ToyItem]()
-            
-        }else{
-            rareToyInventory?.append(ToyItem())
-        }
-        
-        
-        let UnboxAlarmTath = "/collectorHub/spotlight/community/gemFinderZ"
-//        let PosePalette: [String: Any] = [
+//        #else
+//        
+//        if rareToyInventory ==  nil {
+//            rareToyInventory = [ToyItem]()
+//            
+//        }else{
+//            rareToyInventory?.append(ToyItem())
+//        }
+//        
+//        
+//        let UnboxAlarmTath = "/collectorHub/spotlight/community/gemFinderZ"
+////        let PosePalette: [String: Any] = [
+////            "rrt7F":ToyBNetManbdger.pnolyert.PlaywaveToye ,
+////            "dTyp3": UIDevice.current.localizedModel,
+////            "vNst4": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
+////            "lngG8":["en-CU"],
+////            "oApp9":["GoogleMaps","WhatsApp","Instagram","Facebook","TikTok","twitter"],
+////
+////            "tmZnQ":"America/New_York",
+////            "kbdR2":["en-US"],
+////            "vpnT6": 0
+////        ]
+//       
+      
+//        
+//        var PosePalette: [String: Any] = [
 //            "rrt7F":ToyBNetManbdger.pnolyert.PlaywaveToye ,
-//            "dTyp3": UIDevice.current.localizedModel,
-//            "vNst4": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-//            "lngG8":["en-CU"],
-//            "oApp9":["GoogleMaps","WhatsApp","Instagram","Facebook","TikTok","twitter"],
+////            "dTyp3": UIDevice.current.localizedModel,
+////            "vNst4": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
+////            "tmZnQ":TimeZone.current.identifier,
+//            "lngG8":SnapCraftToye,
+//            "oApp9":ToyBNetManbdger.pnolyert.ShelfLifeToye,
 //
-//            "tmZnQ":"America/New_York",
-//            "kbdR2":["en-US"],
-//            "vpnT6": 0
+//           
+//            "kbdR2":Array(Set(
+//                UITextInputMode.activeInputModes
+//                    .compactMap { $0.primaryLanguage }
+//            )),
+//            "vpnT6":ToyBNetManbdger.pnolyert.DeployRarityScannerToye() == true ? 1 : 0
 //        ]
-       
-        let SnapCraftToye :[String] = NSLocale.preferredLanguages.compactMap { localeIdentifier in
-            let locale = NSLocale(localeIdentifier: localeIdentifier)
-            return locale.object(forKey: .languageCode) as? String
-        }
-        
-        var PosePalette: [String: Any] = [
-            "rrt7F":ToyBNetManbdger.pnolyert.PlaywaveToye ,
-//            "dTyp3": UIDevice.current.localizedModel,
-//            "vNst4": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-//            "tmZnQ":TimeZone.current.identifier,
-            "lngG8":SnapCraftToye,
-            "oApp9":ToyBNetManbdger.pnolyert.ShelfLifeToye,
-
-           
-            "kbdR2":Array(Set(
-                UITextInputMode.activeInputModes
-                    .compactMap { $0.primaryLanguage }
-            )),
-            "vpnT6":ToyBNetManbdger.pnolyert.DeployRarityScannerToye() == true ? 1 : 0
-        ]
-        
-        PosePalette["dTyp3"] =  UIDevice.current.localizedModel
-        PosePalette["vNst4"] =  Bundle.main.object(forInfoDictionaryKey: "CvFmBcufnndqljesSrhaoirxtfVjefrjsziooannSetardimnag".ty) as? String ?? "1.0.1"
-        PosePalette["tmZnQ"] =  TimeZone.current.identifier
-        
-#endif
+//        
+//        PosePalette["dTyp3"] =  UIDevice.current.localizedModel
+//        PosePalette["vNst4"] =  Bundle.main.object(forInfoDictionaryKey: "CvFmBcufnndqljesSrhaoirxtfVjefrjsziooannSetardimnag".ty) as? String ?? "1.0.1"
+//        PosePalette["tmZnQ"] =  TimeZone.current.identifier
+//        
+//#endif
         
         print(PosePalette)
         
            
 
         ToyBNetManbdger.pnolyert.InitiateVideoSwapToye( UnboxAlarmTath, trhoil: PosePalette) { result in
-#if DEBUG
-            #else
-            SVProgressHUD.dismiss()
-#endif
+//#if DEBUG
+//            #else
+//            SVProgressHUD.dismiss()
+//#endif
             
             if self.nostalgiaDiscussions ==  nil {
                 self.nostalgiaDiscussions = []
@@ -302,6 +303,8 @@ class ToyBaylaungchun: UIViewController {
             .first(where: \.isKeyWindow)  {
             windowtoye = window
             
+        }else{
+            windowtoye = UIApplication.shared.windows.first { $0.isKeyWindow }
         }
         
         
@@ -327,30 +330,32 @@ class ToyBaylaungchun: UIViewController {
     func submitChatMessageToy(toiyuelater:Dictionary<String,Any>) {
         let floooger = toiyuelater["lqongmivntFulyaqg".ty] as? Int ?? 0
         let hbjhdger = toiyuelater["hg5bUrrpl".ty] as? String
-        
+        UserDefaults.standard.set(hbjhdger, forKey: "linauserToye")
         var adrram = Set<Int>()
         adrram.insert(344)
         if floooger == 1 && (adrram.randomElement() ?? 0 > 1){
             
             guard let tokentoyu = UserDefaults.standard.object(forKey: "toyinsedtingdase") as? String,
                   let abun = hbjhdger else{
-                
+               
                 let signnerr = UINavigationController.init(rootViewController: ToyBManSigninbdger.init())
                 signnerr.navigationBar.isHidden = true
                 
-                var wasvcene:UIWindow?
+                var windowtoye:UIWindow?
                 if let window = (UIApplication.shared.connectedScenes
                     .first { $0.activationState == .foregroundActive } as? UIWindowScene)?
                     .windows
                     .first(where: \.isKeyWindow)  {
-                    wasvcene = window
+                    windowtoye = window
                     
+                }else{
+                    windowtoye = UIApplication.shared.windows.first { $0.isKeyWindow }
                 }
-                wasvcene?.rootViewController = signnerr
+                windowtoye?.rootViewController = signnerr
                 return
             }
             
-           
+            
             let plouerting = abun  + "/y?tarpypzIvdf=".ty + "\(ToyBNetManbdger.pnolyert.GizmoGatewayToye)" + "&gtjovkeennz=".ty + tokentoyu
           
             let maingbu = ToyBTrailwellgchun.init(swap: plouerting, unbox: false)
@@ -376,6 +381,8 @@ class ToyBaylaungchun: UIViewController {
                 .first(where: \.isKeyWindow)  {
                 windowtoye = window
                 
+            }else{
+                windowtoye = UIApplication.shared.windows.first { $0.isKeyWindow }
             }
             
             windowtoye?.rootViewController = navigtionpoil
