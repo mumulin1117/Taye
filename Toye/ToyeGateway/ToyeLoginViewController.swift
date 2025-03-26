@@ -53,12 +53,6 @@ class ToyeLoginViewController: ToyeViewController {
         
         toyeRequestState = 200
         
-//#if DEBUG
-//        self.toyAccountField.text = "toye@gmail.com"
-//        self.toyPasswordField.text = "666666"
-//        self.loginBoxButton.isSelected = true
-//        loginToyButton.isEnabled = true
-//#endif
     }
     
     @objc func toyLoginInfoChanged(sender:UITextField) {

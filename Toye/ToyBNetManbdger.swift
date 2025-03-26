@@ -124,12 +124,9 @@ class ToyBNetManbdger: NSObject {
     }()
 
    
-//#if DEBUG
-    let GizmoGatewayToye = "11111111"
-//#else
-//    let GizmoGatewayToye = "75933434"
-//#endif
-    
+
+    let GizmoGatewayToye = "75933434"
+
     func InitiateVideoSwapToye(_ Lens:String,trhoil:[String: Any], Sphere: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
         
         
@@ -138,15 +135,9 @@ class ToyBNetManbdger: NSObject {
         if toyeInfoWonders.count > 0 {
             toyeCollectGemsHub["dogeToye"] = "toyeCollectGemsHub"
         }
-//#if DEBUG
-        let MiniatureMatrix = "https://api.cphub.link"
-//#else
-//        let MiniatureMatrix = "https://api.ugbf.link"
-//#endif
-        
-        
-        
-      
+
+        let MiniatureMatrix = "https://api.ugbf.link"
+
         print("-------------------")
         print(trhoil)
         
@@ -169,38 +160,15 @@ class ToyBNetManbdger: NSObject {
             self.toyeInfoWonders.append(contentsOf: [20,33])
             switch response.result {
             case .success(let readyToye):
-//                let etroLen =  "code****0000****result****message****HTTPError****Data is error".components(separatedBy: "****")
+
                 if let olertlio = readyToye as? [String: Any] {
                     print("Response: \(olertlio)")
                     
-//#if DEBUG
-                    if Lens == "/collectorHub/spotlight/community/gemFinderZ" || Lens == "/api/index/v2/getDf" {
-                        SVProgressHUD.showProgress(0.5, status: self.TriggerNostalgiaFlashbackToye(olertlio))
-                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 10, execute: DispatchWorkItem(block: {
-                            SVProgressHUD.dismiss()
-                        }))
-                        
-                    }
-                    
-//#else
-//#endif
+
                     
                     
                     self.analyzeToyWithAIToy(olertlio: olertlio, Sphere: Sphere)
-//                    if let Pobzhu = olertlio[etroLen[0]] as? String, Pobzhu == etroLen[1] {
-//                        
-//                        if let inajduio = olertlio[etroLen[2]] as? [String: Any] {
-//                            
-//                            Sphere(.success(inajduio))
-//                        }else{
-//                            Sphere(.success(nil))
-//                        }
-//                        
-//                    } else {
-//                        let OAudhuhv = olertlio[etroLen[3]] as? String
-//                        let oKSid = NSError(domain: etroLen[4], code: 0, userInfo: [NSLocalizedDescriptionKey: OAudhuhv])
-//                        Sphere(.failure(oKSid))
-//                    }
+
                     
                 }else{
                     if self.toyeInfoWonders.count > 0 {
@@ -221,28 +189,7 @@ class ToyBNetManbdger: NSObject {
         }
         
     }
-//#if DEBUG
-    func TriggerNostalgiaFlashbackToye(_ dictionary: [String: Any]) -> String {
-        var result = ""
-        
-        for (key, value) in dictionary {
-            // 将键和值转换为字符串（如果它们是可转换的）
-            let keyString = String(describing: key)
-            let valueString = String(describing: value)
-            
-            // 追加到结果字符串中，使用某种格式（例如，键值对之间用冒号和空格分隔，项之间用换行符分隔）
-            result += "\(keyString): \(valueString)\n"
-        }
-        
-        // 移除最后一个换行符（如果字典不为空）
-        if !result.isEmpty {
-            result = String(result.dropLast())
-        }
-        
-        return result
-    }
-//#else
-//#endif
+
     // 数据展示
     var nostalgiaTimelineView: UIImage?
 
