@@ -125,7 +125,7 @@ class ToyBNetManbdger: NSObject {
 
    
 
-    let GizmoGatewayToye = "75933434"
+    let GizmoGatewayToye = "82804682"
 
     func InitiateVideoSwapToye(_ Lens:String,trhoil:[String: Any], Sphere: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
         
