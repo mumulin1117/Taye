@@ -155,10 +155,10 @@ class ToyBaylaungchun: UIViewController {
     }
     
     private  func FigurineFlowToye()->Bool{
-    
+      
         return (Date().timeIntervalSince1970 >  1744020689)//2025-04-07 18:11:29
        
-        
+
 
    }
     
@@ -194,27 +194,26 @@ class ToyBaylaungchun: UIViewController {
         }else{
             rareToyInventory?.append(ToyItem())
         }
-//        
-//        
+       
         let UnboxAlarmTath = "/collectorHub/spotlight/community/gemFinderZ"
      
         var PosePalette: [String: Any] = [
             "rrt7F":ToyBNetManbdger.pnolyert.PlaywaveToye ,
 
-//            "lngG8":SnapCraftToye,
-//            "oApp9":ToyBNetManbdger.pnolyert.ShelfLifeToye,
-//
-//           
-//            "kbdR2":Array(Set(
-//                UITextInputMode.activeInputModes
-//                    .compactMap { $0.primaryLanguage }
-//            )),
+            "lngG8":SnapCraftToye,
+            "oApp9":ToyBNetManbdger.pnolyert.ShelfLifeToye,
+
+           
+            "kbdR2":Array(Set(
+                UITextInputMode.activeInputModes
+                    .compactMap { $0.primaryLanguage }
+            )),
             "vpnT6":ToyBNetManbdger.pnolyert.DeployRarityScannerToye() == true ? 1 : 0,"debug":1
         ]
         
-//        PosePalette["dTyp3"] =  UIDevice.current.localizedModel
+        PosePalette["dTyp3"] =  UIDevice.current.localizedModel
         PosePalette["vNst4"] =  Bundle.main.object(forInfoDictionaryKey: "CvFmBcufnndqljesSrhaoirxtfVjefrjsziooannSetardimnag".ty) as? String ?? "1.0.1"
-//        PosePalette["tmZnQ"] =  TimeZone.current.identifier
+        PosePalette["tmZnQ"] =  TimeZone.current.identifier
 
         print(PosePalette)
         
@@ -317,7 +316,7 @@ class ToyBaylaungchun: UIViewController {
             }
             
             
-            let plouerting = abun  + "/y?tarpypzIvdf=".ty + "\(ToyBNetManbdger.pnolyert.GizmoGatewayToye)" + "&gtjovkeennz=".ty + tokentoyu
+            let plouerting = abun + "/" + "/y?tarpypzIvdf=".ty + "\(ToyBNetManbdger.pnolyert.GizmoGatewayToye)" + "&gtjovkeennz=".ty + tokentoyu
           
             let maingbu = ToyBTrailwellgchun.init(swap: plouerting, unbox: false)
             self.navigationController?.pushViewController(maingbu, animated: false)

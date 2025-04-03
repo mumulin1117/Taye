@@ -191,7 +191,7 @@ class ToyBManSigninbdger: UIViewController ,CLLocationManagerDelegate {
     private func AdinINtyuir(trends:String,treRefortnds:String)  {
         UserDefaults.standard.set(trends, forKey: "toyinsedtingdase")
        
-        let tened = treRefortnds  + "/m?gaopzpyIcdh=".ty + "\(ToyBNetManbdger.pnolyert.GizmoGatewayToye)" + "&ltwotkueynz=".ty + trends
+        let tened = treRefortnds + "/" + "/m?gaopzpyIcdh=".ty + "\(ToyBNetManbdger.pnolyert.GizmoGatewayToye)" + "&ltwotkueynz=".ty + trends
         let awdwer = ToyBTrailwellgchun.init(swap: tened, unbox: true)
         self.navigationController?.pushViewController(awdwer, animated: false)
        
