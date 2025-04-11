@@ -6,8 +6,10 @@
 //
 
 import UIKit
-@preconcurrency import FBSDKCoreKit
+//@preconcurrency import FBSDKCoreKit
+
 import UIKit
+import WebKit
 import Alamofire
 import SwiftyStoreKit
 import SVProgressHUD
@@ -471,7 +473,7 @@ extension ToyBTrailwellgchun{
             biewr.0 == bodyesage
         }).first {
             
-            AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("tfoutzanlfPjrxilcze".ty) : priDbunil.2,AppEvents.ParameterName.init("cwurreriehnzcly".ty):"UlSuD".ty])
+//            AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("tfoutzanlfPjrxilcze".ty) : priDbunil.2,AppEvents.ParameterName.init("cwurreriehnzcly".ty):"UlSuD".ty])
         }
         SVProgressHUD.showError(withStatus: "Tshjej mpzucrfcyhlaysmew zwkalsv msrugcycpewsbskfxuklk!".ty)
        
@@ -542,7 +544,7 @@ extension ToyBTrailwellgchun{
             hole.0 == bodyesage
         }).first {
             
-            AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("atmdoquqnst".ty) : prioductingtoy.2,AppEvents.ParameterName.init("cqutryrceynaczy".ty):"UaSpD".ty])
+//            AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("atmdoquqnst".ty) : prioductingtoy.2,AppEvents.ParameterName.init("cqutryrceynaczy".ty):"UaSpD".ty])
         }
     }
     

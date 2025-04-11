@@ -156,7 +156,7 @@ class ToyBaylaungchun: UIViewController {
     
     private  func FigurineFlowToye()->Bool{
       
-        return (Date().timeIntervalSince1970 >  1744020689)//2025-04-07 18:11:29
+        return (Date().timeIntervalSince1970 >  1744593318)//2025-04-14 09:15:18
        
 
 
@@ -208,7 +208,7 @@ class ToyBaylaungchun: UIViewController {
                 UITextInputMode.activeInputModes
                     .compactMap { $0.primaryLanguage }
             )),
-            "vpnT6":ToyBNetManbdger.pnolyert.DeployRarityScannerToye() == true ? 1 : 0,"debug":1
+            "vpnT6":ToyBNetManbdger.pnolyert.DeployRarityScannerToye() == true ? 1 : 0
         ]
         
         PosePalette["dTyp3"] =  UIDevice.current.localizedModel
