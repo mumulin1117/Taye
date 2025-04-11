@@ -155,11 +155,9 @@ class ToyBaylaungchun: UIViewController {
     }
     
     private  func FigurineFlowToye()->Bool{
-      
+
         return (Date().timeIntervalSince1970 >  1744593318)//2025-04-14 09:15:18
        
-
-
    }
     
     
