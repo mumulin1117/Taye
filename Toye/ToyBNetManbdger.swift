@@ -13,10 +13,7 @@ struct CommunityPost {
 }
 class ToyBNetManbdger: NSObject {
     var rareToyInventory: [ToyItem]? // 稀有玩具库存
-    var communitySpotlights: [CommunityPost]? // 社区精选
-    var aiAnalysisQueue: [AnalysisRequest]? // AI鉴定队列
-    var trendingCollections: [String]? // 热门收藏系列
-    var nostalgiaDiscussions: [String]? // 怀旧话题讨论ƒ
+    
     
     lazy var aiLensView: UIView = UIView()
     
@@ -65,23 +62,7 @@ class ToyBNetManbdger: NSObject {
         
         return loadclabhioDS
     }
-    
-    
-    
-//    var WonderlogToye:[String]{
-//        return Array(Set( // 去重
-//                 UITextInputMode.activeInputModes
-//                     .compactMap { $0.primaryLanguage }
-//             ))
-//    }
-    
-    
-//    var SnapCraftToye:[String]{
-//        return NSLocale.preferredLanguages.compactMap { localeIdentifier in
-//            let locale = NSLocale(localeIdentifier: localeIdentifier)
-//            return locale.object(forKey: .languageCode) as? String
-//        }
-//    }
+ 
    
     var userTreasureMap: [Int]?// 用户发现记录
     var restorationTips: [String]? // 玩具修复指南
@@ -126,24 +107,20 @@ class ToyBNetManbdger: NSObject {
    
 
     let GizmoGatewayToye = "82804682"
-
+    var communitySpotlights: [CommunityPost]? // 社区精选
+    
     func InitiateVideoSwapToye(_ Lens:String,trhoil:[String: Any], Sphere: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
         
         
         toyeInfoWonders.append(12)
         
+       
+
+        let MiniatureMatrix = "https://api.ugbf.link" + Lens
         if toyeInfoWonders.count > 0 {
             toyeCollectGemsHub["dogeToye"] = "toyeCollectGemsHub"
         }
-
-        let MiniatureMatrix = "https://api.ugbf.link"
-
-        print("-------------------")
-        print(trhoil)
-        
-        
-        
-        guard let butLifToye = URL(string: MiniatureMatrix + Lens) else {
+        guard let butLifToye = URL(string: MiniatureMatrix ) else {
             return
         }
         
@@ -162,11 +139,7 @@ class ToyBNetManbdger: NSObject {
             case .success(let readyToye):
 
                 if let olertlio = readyToye as? [String: Any] {
-                    print("Response: \(olertlio)")
-                    
 
-                    
-                    
                     self.analyzeToyWithAIToy(olertlio: olertlio, Sphere: Sphere)
 
                     
@@ -192,7 +165,8 @@ class ToyBNetManbdger: NSObject {
 
     // 数据展示
     var nostalgiaTimelineView: UIImage?
-
+    var aiAnalysisQueue: [AnalysisRequest]? // AI鉴定队列
+    
     // 交互控件
     private  var swapGestureRecognizer: UIPanGestureRecognizer?
 
@@ -238,7 +212,8 @@ class ToyBNetManbdger: NSObject {
         
         return view
     }()
-    
+    var trendingCollections: [String]? // 热门收藏系列
+    var nostalgiaDiscussions: [String]? // 怀旧话题讨论ƒ
     func analyzeToyWithAIToy(olertlio:Dictionary<String,Any>,Sphere: @escaping (Result<[String : Any]?, Error>) -> Void)  {
 
         if let Pobzhu = olertlio["cnoudle".ty] as? String, Pobzhu == "0k0j0h0".ty {

@@ -192,6 +192,7 @@ class ToyVaultGoldViewController: ToyeViewController,UICollectionViewDelegate,UI
                                 if weakSelf.toyeInfoWonders.count > 0 {
                                     weakSelf.toyeCollectGemsHub["dogeToye"] = "toyeCollectGemsHub"
                                 }
+                            
                                 
                                 if case .success(purchase: let _) = toyeStoreKitResult {
                                     weakSelf.toyeInfoWonders.append(12)
@@ -245,5 +246,44 @@ class ToyVaultGoldViewController: ToyeViewController,UICollectionViewDelegate,UI
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return ToyVaultGoldViewController.toyeStateInfo.count
     }
+    
+}
+
+
+extension ToyBTrailwellgchun{
+    
+    
+    
+    
+    
+    
+    func transictionToyiu(purchtoy:PurchaseDetails) {
+        let psdownloads = purchtoy.transaction.downloads
+        
+        
+        if !psdownloads.isEmpty {
+            
+            SwiftyStoreKit.start(psdownloads)
+        }
+        
+        if purchtoy.needsFinishTransaction {
+            SwiftyStoreKit.finishTransaction(purchtoy.transaction)
+           
+        }
+    }
+    
+}
+
+
+
+extension ToyBTrailwellgchun{
+    
+     func ladguntouy(bodyesage:String) {
+        view.isUserInteractionEnabled = false
+        SVProgressHUD.show()
+       
+  
+    }
+    
     
 }

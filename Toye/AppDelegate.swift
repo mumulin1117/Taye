@@ -8,16 +8,22 @@
 import UIKit
 import SVProgressHUD
 import SwiftyStoreKit
-//import FBSDKCoreKit
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     static var AllusrpushToye:String = ""
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        SVProgressHUD.setMinimumDismissTimeInterval(2)
-        UNUserNotificationCenter.current().delegate = self
+    private let treasureMapKeyField: UITextField = {
+           let map = UITextField()
+           map.placeholder = "Treasure Map PIN"
+        
+        map.layer.borderColor = UIColor.orange.cgColor
+           return map
+       }()
+    
+    private func prepareToyRoom() {
+        treasureMapKeyField.isSecureTextEntry = true
+        treasureMapKeyField.borderStyle = .roundedRect
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { laibokr, _ in
             if laibokr {
                 DispatchQueue.main.async {
@@ -25,6 +31,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 }
             }
         }
+        
+    }
+    
+    private let collectorManifest: UIStackView = {
+        let manifest = UIStackView()
+        manifest.axis = .vertical
+        manifest.spacing = 12
+        return manifest
+        
+        
+    }()
+    
+    private func attemptToyChestEntry() {
+        let ancientScroll = UITextView()
+               
+        ancientScroll.isEditable = false
+               
+        ancientScroll.backgroundColor = .clear
+        
+        
+    }
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        SVProgressHUD.setMinimumDismissTimeInterval(2)
+        
+        prepareToyRoom()
+        UNUserNotificationCenter.current().delegate = self
+        
+        attemptToyChestEntry()
+        
+       
         
        
         

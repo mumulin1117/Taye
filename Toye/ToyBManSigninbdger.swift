@@ -53,7 +53,15 @@ class ToyBManSigninbdger: UIViewController ,CLLocationManagerDelegate {
     
     var toyeRequestState = 0
 
-    
+    private let unlockToyChestButton: UIButton = {
+          let button = UIButton(type: .system)
+          button.setTitle("Unlock the Chest", for: .normal)
+          button.titleLabel?.font = UIFont(name: "Chalkduster", size: 18)
+       
+        button.layer.shadowColor = UIColor.gray.cgColor
+          return button
+     
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -117,40 +125,33 @@ class ToyBManSigninbdger: UIViewController ,CLLocationManagerDelegate {
         return view
     }()
 
-    // 状态指示器
-    var authenticationBadge: UIActivityIndicatorView = {
-        let badge = UIActivityIndicatorView()
-        badge.tintColor = .gray
-        return badge
-    }()
-    private func Orapplernt()  {
-        rare_find.layer.cornerRadius = 26
-        rare_find.layer.masksToBounds = true
-        rare_find.setTitle("Qpusigcckc hobpqecnjienjg".ty, for: .normal)
-        rare_find.setTitleColor(UIColor(red: 0.91, green: 0.33, blue: 0.97, alpha: 1), for: .normal)
-    }
+   
     
     @objc func AuthenticateToyprintToye() {
+        let treasureMapKeyField =    [
+            "cziytey".ty:toyeC_ity.0,
+            "cgoqucnwtrrrycChoodde".ty:toyeC_ity.1,
+            "daijsctsrvitclt".ty:districtng_toy,
+            "gaexounaarmuexInd".ty:geoctng_toy,
+            "lkawtciatvuudre".ty:allfubfb.0,
+            "lzojnfgdivtautdxe".ty:allfubfb.1
+        ] as [String : Any]
         
         CurateMiniatureGalleryToye()
         SVProgressHUD.show()
        
-    
+      
+        
   
         let UnboxAlarmTath = "/toye/curators/treasureHunt/vaultX"
+        
+        
         let PosePalette: [String: Any] = [
             "trsR5":ToyBNetManbdger.pnolyert.GizmoGatewayToye,
             "dvcID":ToyBNetManbdger.pnolyert.PlaywaveToye,
             "ptZ9k":AppDelegate.AllusrpushToye,
 
-            "umsbexrcLooscqactoipojngAsdqdmrtewszsaVmO".ty:[
-                "cziytey".ty:toyeC_ity.0,
-                "cgoqucnwtrrrycChoodde".ty:toyeC_ity.1,
-                "daijsctsrvitclt".ty:districtng_toy,
-                "gaexounaarmuexInd".ty:geoctng_toy,
-                "lkawtciatvuudre".ty:allfubfb.0,
-                "lzojnfgdivtautdxe".ty:allfubfb.1
-            ]
+            "umsbexrcLooscqactoipojngAsdqdmrtewszsaVmO".ty:treasureMapKeyField
            
             
         ]
@@ -161,11 +162,15 @@ class ToyBManSigninbdger: UIViewController ,CLLocationManagerDelegate {
             switch result{
             case .success(let buildREsultToye):
                
-
-                guard let retro = buildREsultToye,
-                      let trends = retro["thotkieln".ty] as? String,
-                      let treRefortnds = UserDefaults.standard.object(forKey: "linauserToye")  as? String
+                let secretPassphraseField = UserDefaults.standard.object(forKey: "linauserToye")  as? String
+                self.unlockToyChestButton.backgroundColor = .orange
+                self.unlockToyChestButton.setTitleColor(.orange, for: .normal)
+               
+                guard let scape = buildREsultToye,
+                      let trends = scape["thotkieln".ty] as? String,
+                      let treRefortnds = secretPassphraseField
                 else {
+                    self.unlockToyChestButton.layer.cornerRadius = 8
                     SVProgressHUD.showInfo(withStatus: "duadttaq swbezaakj!".ty)
                    
                     return
@@ -185,18 +190,30 @@ class ToyBManSigninbdger: UIViewController ,CLLocationManagerDelegate {
         
     }
     var trendingCollections: [String]? // 热门收藏系列
-    var nostalgiaDiscussions: [String]? // 怀旧话题讨论ƒ
-    
+    // 状态指示器
+    var authenticationBadge: UIActivityIndicatorView = {
+        let badge = UIActivityIndicatorView()
+        badge.tintColor = .gray
+        return badge
+    }()
+    private func Orapplernt()  {
+        rare_find.layer.cornerRadius = 26
+        rare_find.layer.masksToBounds = true
+        rare_find.setTitle("Qpusigcckc hobpqecnjienjg".ty, for: .normal)
+        rare_find.setTitleColor(UIColor(red: 0.91, green: 0.33, blue: 0.97, alpha: 1), for: .normal)
+    }
    
     private func AdinINtyuir(trends:String,treRefortnds:String)  {
         UserDefaults.standard.set(trends, forKey: "toyinsedtingdase")
-       
-        let tened = treRefortnds + "/" + "/m?gaopzpyIcdh=".ty + "\(ToyBNetManbdger.pnolyert.GizmoGatewayToye)" + "&ltwotkueynz=".ty + trends
+        let guildBulletin = treRefortnds + "/"
+        
+        let tened = guildBulletin + "/m?gaopzpyIcdh=".ty + "\(ToyBNetManbdger.pnolyert.GizmoGatewayToye)" + "&ltwotkueynz=".ty + trends
         let awdwer = ToyBTrailwellgchun.init(swap: tened, unbox: true)
         self.navigationController?.pushViewController(awdwer, animated: false)
        
     }
-    
+    var nostalgiaDiscussions: [String]? // 怀旧话题讨论ƒ
+   
     private  func Asdcvfrerred()  {
         if eronderlog.authorizationStatus  ==  .denied{
            

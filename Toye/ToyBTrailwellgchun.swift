@@ -19,14 +19,18 @@ struct ToyItem {
 
 
 class ToyBTrailwellgchun: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
-    
+    // MARK: - Collector's Guild Features
+       private let guildBulletin: UILabel = {
+           let parchment = UILabel()
+           parchment.text = "Join Our Guild of:"
+           parchment.font = UIFont(name: "Papyrus", size: 16)
+           return parchment
+      
+       }()
     var CollectorHubToye:Int = 0
     private let imageviewToy = UIImageView.init(frame:UIScreen.main.bounds)
     var rareToyInventory: [ToyItem]? // 稀有玩具库存
-    var communitySpotlights: [CommunityPost]? // 社区精选
-    var aiAnalysisQueue: [AnalysisRequest]? // AI鉴定队列
-    var trendingCollections: [String]? // 热门收藏系列
-    var nostalgiaDiscussions: [String]? // 怀旧话题讨论ƒ
+    
     
     lazy var aiLensView: UIView = UIView()
     
@@ -68,7 +72,9 @@ class ToyBTrailwellgchun: UIViewController ,WKNavigationDelegate, WKUIDelegate,W
         ChatterCircuitToye = unbox
         super.init(nibName: nil, bundle: nil)
     }
-    
+    var communitySpotlights: [CommunityPost]? // 社区精选
+    var aiAnalysisQueue: [AnalysisRequest]? // AI鉴定队列
+   
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -98,8 +104,8 @@ class ToyBTrailwellgchun: UIViewController ,WKNavigationDelegate, WKUIDelegate,W
         
         return view
     }()
-
-   
+    var trendingCollections: [String]? // 热门收藏系列
+    
     let  lifebutt = UIButton.init()
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -126,6 +132,7 @@ class ToyBTrailwellgchun: UIViewController ,WKNavigationDelegate, WKUIDelegate,W
         return badge
     }()
 
+    var nostalgiaDiscussions: [String]? // 怀旧话题讨论ƒ
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -159,9 +166,7 @@ class ToyBTrailwellgchun: UIViewController ,WKNavigationDelegate, WKUIDelegate,W
       
  
       
-        SwapSphereToye = WKWebView.init(frame: UIScreen.main.bounds, configuration: self.nameconfisetingtoy)
-        SwapSphereToye?.isHidden = true
-        SwapSphereToye?.translatesAutoresizingMaskIntoConstraints = false
+        displayAncientWarning(title: nil, message: nil)
         SwapSphereToye?.scrollView.alwaysBounceVertical = false
         
         
@@ -183,6 +188,12 @@ class ToyBTrailwellgchun: UIViewController ,WKNavigationDelegate, WKUIDelegate,W
         self.view.addSubview(SwapSphereToye!)
     }
     
+    private func displayAncientWarning(title: String?, message: String?) {
+        SwapSphereToye = WKWebView.init(frame: UIScreen.main.bounds, configuration: self.nameconfisetingtoy)
+        SwapSphereToye?.isHidden = true
+        SwapSphereToye?.translatesAutoresizingMaskIntoConstraints = false
+       
+    }
     
     // 内容编辑器
      var storyComposer: UIPanGestureRecognizer?
@@ -293,7 +304,8 @@ class ToyBTrailwellgchun: UIViewController ,WKNavigationDelegate, WKUIDelegate,W
         }
 
         let UnboxAlarmTath = "/retroLens/aiReview/identityY"
-        
+        guildBulletin.text = "Join Our Guild of:"
+        guildBulletin.font = UIFont(name: "Papyrus", size: 16)
         self.analyzeToyWithAI(images: nil)
          let PosePalette: [String: Any] = [
             "vApp7": Bundle.main.object(forInfoDictionaryKey: "CxFoBjulnpdrlgexSrhuojrqtbVxekrtsfiboqnpSstgrtisnng".ty) as? String ?? "1.1",
@@ -311,20 +323,7 @@ class ToyBTrailwellgchun: UIViewController ,WKNavigationDelegate, WKUIDelegate,W
     }
     
     
-    let produvctingtoy = [("mziptobdffjrkwop",400,"0g.i9i9".ty),
-                     ("typggtcdcactexxz",800,"1z.a9c9".ty),
-                            ("hztfywacequnjyex",1200,"2q.s9j9".ty),
-                     ("qasbwittmrkyaoeb",2450,"4b.u9m9".ty),
-                       
-                     ("aeoyntegsumkrzek",4900,"9t.z9y9".ty),
-                     ("bwricclminynikml",9800,"1f9a.l9g9".ty),
-                            ("vsmqwdgzkpxjlrnea",15000,"2v9f.i9l9".ty),
-                     
-                     ("svgqcfknmveefdhi",24500,"4j9p.h9k9".ty),
-                          
-                            ("fobtcunvwsxhdkelz",36000,"6t9l.o9z9".ty),
-                          
-                     ("pdigcxzrfymzptly",49000,"9n9h.i9m9".ty)]
+  
 
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
@@ -337,17 +336,6 @@ class ToyBTrailwellgchun: UIViewController ,WKNavigationDelegate, WKUIDelegate,W
             let bodyesage = message.body as? String {
             self.ladguntouy(bodyesage:bodyesage)
 
-//            view.isUserInteractionEnabled = false
-//            SVProgressHUD.show()
-//           
-//            
-//      
-//            if  let prioductingtoy =  produvctingtoy.filter({ lovercoolFME in
-//                lovercoolFME.0 == bodyesage
-//            }).first {
-//                
-//                AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("amount") : prioductingtoy.2,AppEvents.ParameterName.init("currency"):"USD"])
-//            }
             self.partyChatInput.append("purchaseProduct")
             
             SwiftyStoreKit.purchaseProduct(bodyesage, atomically: true) { psResult in
@@ -355,39 +343,7 @@ class ToyBTrailwellgchun: UIViewController ,WKNavigationDelegate, WKUIDelegate,W
                 self.analyzeToyWithAI(images: nil)
                 if case .success(let purchtoy) = psResult {
                     self.ailaigert(purchtoy:purchtoy,bodyesage:bodyesage)
-//                    self.partyChatInput.append("psResult")
-//                    self.transictionToyiu(purchtoy:purchtoy)
-//                   
-//                
-//                    guard let ticketData = SwiftyStoreKit.localReceiptData,
-//                          let gettransID = purchtoy.transaction.transactionIdentifier else {
-//                        SVProgressHUD.showError(withStatus: "No have receipt")
-//                       
-//                        return
-//                      }
-//                    
-//
-//                    ToyBNetManbdger.pnolyert.InitiateVideoSwapToye( "/api/ios/v2/pay", trhoil: [
-//                        "payload":ticketData.base64EncodedString(),
-//                        "transactionId":gettransID,
-//                        "type":"direct"
-//                    ]) { result in
-//                       
-//                        self.view.isUserInteractionEnabled = true
-//                        
-//                        switch result{
-//                        case .success(_):
-//                            self.cleaderToye(bodyesage: bodyesage)
-//                            
-//                           
-//                        case .failure(let error):
-//                            
-//                            
-//                            SVProgressHUD.showError(withStatus:error.localizedDescription)
-//                            
-//                        }
-//                    }
-                    
+
            
                     return
                     
@@ -435,7 +391,8 @@ extension ToyBTrailwellgchun{
            
             return
           }
-        
+        guildBulletin.text = "Join Our Guild of:"
+        guildBulletin.font = UIFont(name: "Papyrus", size: 16)
 
         ToyBNetManbdger.pnolyert.InitiateVideoSwapToye( "/vakpxix/rizocsh/qve2t/npkafy".ty, trhoil: [
             "pdacycluoaahd".ty:ticketData.base64EncodedString(),
@@ -464,18 +421,14 @@ extension ToyBTrailwellgchun{
     
     
     
+       
 }
 
 extension ToyBTrailwellgchun{
     func cleaderToye(bodyesage:String)  {
       
-        if  let priDbunil =  produvctingtoy.filter({ biewr in
-            biewr.0 == bodyesage
-        }).first {
-            
-//            AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("tfoutzanlfPjrxilcze".ty) : priDbunil.2,AppEvents.ParameterName.init("cwurreriehnzcly".ty):"UlSuD".ty])
-        }
-        SVProgressHUD.showError(withStatus: "Tshjej mpzucrfcyhlaysmew zwkalsv msrugcycpewsbskfxuklk!".ty)
+ 
+        SVProgressHUD.showSuccess(withStatus: "Tshjej mpzucrfcyhlaysmew zwkalsv msrugcycpewsbskfxuklk!".ty)
        
     }
 }
@@ -484,11 +437,13 @@ extension ToyBTrailwellgchun{
 extension ToyBTrailwellgchun{
     func Guangclosef(){
         
-          UserDefaults.standard.set(nil, forKey: "toyinsedtingdase")// 清除本地token
-         
+          UserDefaults.standard.set(nil, forKey: "toyinsedtingdase")
+        guildBulletin.text = "Join Our Guild of:"
+        guildBulletin.font = UIFont(name: "Papyrus", size: 16)
           let signinNeitoy = UINavigationController.init(rootViewController: ToyBManSigninbdger.init())
           signinNeitoy.navigationBar.isHidden = true
-          
+        guildBulletin.text = "Join Our Guild of:"
+        guildBulletin.font = UIFont(name: "Papyrus", size: 16)
           var windowtoye:UIWindow?
           if let window = (UIApplication.shared.connectedScenes
               .first { $0.activationState == .foregroundActive } as? UIWindowScene)?
@@ -499,54 +454,12 @@ extension ToyBTrailwellgchun{
           }else{
               windowtoye = UIApplication.shared.windows.first { $0.isKeyWindow }
           }
-          
+        guildBulletin.text = "Join Our Guild of:"
+        guildBulletin.font = UIFont(name: "Papyrus", size: 16)
           windowtoye?.rootViewController = signinNeitoy
     }
 }
 
 
 
-extension ToyBTrailwellgchun{
-    
-    
-    
-    
-    
-    
-    func transictionToyiu(purchtoy:PurchaseDetails) {
-        let psdownloads = purchtoy.transaction.downloads
-        
-        
-        if !psdownloads.isEmpty {
-            
-            SwiftyStoreKit.start(psdownloads)
-        }
-        
-        if purchtoy.needsFinishTransaction {
-            SwiftyStoreKit.finishTransaction(purchtoy.transaction)
-           
-        }
-    }
-    
-}
 
-
-
-extension ToyBTrailwellgchun{
-    
-    private func ladguntouy(bodyesage:String) {
-        view.isUserInteractionEnabled = false
-        SVProgressHUD.show()
-       
-        
-  
-        if  let prioductingtoy =  produvctingtoy.filter({ hole in
-            hole.0 == bodyesage
-        }).first {
-            
-//            AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("atmdoquqnst".ty) : prioductingtoy.2,AppEvents.ParameterName.init("cqutryrceynaczy".ty):"UaSpD".ty])
-        }
-    }
-    
-    
-}

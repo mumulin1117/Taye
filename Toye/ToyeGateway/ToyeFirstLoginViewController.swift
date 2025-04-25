@@ -15,9 +15,18 @@ class ToyeFirstLoginViewController: ToyeViewController {
     @IBOutlet weak var toyeBoxButton: UIButton!
     @IBOutlet weak var LoginTyPrompt: UILabel!
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if UserDefaults.standard.bool(forKey: "oisdhsd") != true {
+            userAgreementShow(state:2)
+            UserDefaults.standard.set(true, forKey: "oisdhsd")
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         LoginTyPrompt.rz.tapAction { [weak self]  _, actionID, _ in
             guard let self = self else {
@@ -86,10 +95,11 @@ class ToyeFirstLoginViewController: ToyeViewController {
     
     func userAgreementShow(state:Int){
         if let agreementView = Bundle.main.loadNibNamed("ToyeUserAgreementView", owner: nil)?.first as? ToyeUserAgreementView{
-            agreementView.agreementShow(state: state)
+            agreementView.agreementShow(state: 2)
             agreementView.agreementClosure = { [weak self] tyTag in
                 if let weakSelf = self,tyTag == 1 {
                     weakSelf.toyeBoxButton.isSelected = true
+                    UserDefaults.standard.set(true, forKey: "oisdhsd")
                 }
             }
         }

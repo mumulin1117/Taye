@@ -52,7 +52,7 @@ class ToyeUserAgreementView: UIView {
             If you have any questions or suggestions regarding this agreement, please contact us at:
             Email: support@toye.com
             """
-        }else{
+        }else if toyeStyle == 1{
             return """
             Privacy Policy
 
@@ -93,10 +93,46 @@ class ToyeUserAgreementView: UIView {
             If you have any questions, concerns, or suggestions about this Privacy Policy, please contact us at:
             Email: privacy@toye.com
             """
+        }else {
+            return """
+            Toye – Updated End User License Agreement (EULA)
+            ﻿
+            1. Acceptable Use Policy
+            ﻿
+            Toye is a social platform for toy collectors, enthusiasts, and creatives. By using Toye, you agree to the following rules:
+            🚫 No Adult Content – Pornography, nudity, sexually explicit material, or NSFW discussions are strictly prohibited.
+            🚫 No Harassment or Bullying – Hate speech, threats, racism, sexism, or abusive behavior will not be tolerated.
+            🚫 No Fake Identities – Impersonation, fake profiles, or misleading information is banned.
+            🚫 No Spam/Advertising – Unauthorized promotions, scams, or commercial spam are not allowed.
+            🚫 No Illegal Content – Discussions or sharing of violent, drug-related, or illegal activities are forbidden.
+            ﻿
+            2. User Responsibilities
+            ﻿
+            Profile Verification: Users must register with a valid username, profile picture, and interests. Anonymous usage is prohibited.
+            Consent-Based Chatting: Users can only communicate after mutual acceptance (friend requests or interest-based matching). Random stranger chat is disabled.
+            Reporting Violations: Users must immediately report any rule-breaking content or behavior via in-app tools.
+            3. Content Moderation & Enforcement
+            ﻿
+            Automated + Human Moderation: Toye uses AI filtering and manual review to block inappropriate text, images, and videos.
+            24-Hour Response: All reports are reviewed within 24 hours. Violators face permanent bans.
+            Zero-Tolerance Policy: Severe violations (e.g., adult content, harassment) result in account termination and possible legal reporting.
+            4. Disclaimer of Liability
+            ﻿
+            Toye is not liable for user-generated content but commits to:
+            ✔ Reviewing reports within 24 hours.
+            ✔ Continuously improving moderation systems.
+            ✔ Cooperating with law enforcement for illegal activity.
+            ﻿
+            Implementation Steps
+            ﻿
+            Display Prominently: Force users to accept the EULA during signup (checkbox + link to full terms).
+            Submit to Apple: Include this policy in your resubmission notes to demonstrate compliance.
+            Enforce Strictly: Ensure reporting/blocking tools and moderation workflows function correctly.
+"""
         }
     }
     
-    var toyeStyle = 0
+    var toyeStyle = 2
 
     @IBOutlet weak var userAgreementTextView: UITextView!
     /*
